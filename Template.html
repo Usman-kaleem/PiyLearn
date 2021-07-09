@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+	<link rel="stylesheet"  href="CSS/utilities.css">
+	<link rel="stylesheet"  href="CSS/style.css">
+    <script type="text/javascript" src="jquery-3.6.0.js"></script>
+    <!-- py -3 -m http.serverv    -->
+    
+	<title> PiyLearn | </title>
+</head>
+<body>
+	<!-- Navebar -->
+	<div class="navbar">
+		<div class="container flex">
+			<h1 class="logo"> PiyLearn. </h1>
+			<nav>
+				<ul>
+					<li><a class="top-nav-active" href="index.html"> Tutorials</a></li>
+					<li><a href="features.html"> Projects</a></li>
+					<!-- <li><a href="docs.html"> Docs</a></li> -->
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+
+
+    <!-- Docs main -->
+    <section class="docs-main my-4">
+        <div class="container grid">
+             <div class="card bg-light p-3" id="nav-placeholder">
+                <!-- This is HTML form the Nav.html file -->
+                <script>
+                    $(function(){
+                        $("#nav-placeholder").load("Nav.html");
+                    });      
+                </script>
+            </div>
+
+           
+
+            <div class="card">
+                <h2><b>Title</b></h2>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla psariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <br>
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+X = 11
+Y = 3
+
+If X > Y 
+    Print(“X is larger then Y”) 
+    Print(“Y is not larger then X”)
+                </code></pre>
+                <br>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+X = 11
+Y = 3
+
+If X > Y 
+    Print(“X is larger then Y”) 
+    Print(“Y is not larger then X”)
+                </code></pre>
+
+         
+
+                <br>
+
+                <div class="alert alert-success">
+                    <i class="fas fa-info"></i> Note:
+                </div>
+
+                <div class="alert alert-error">
+                    <i class="fas fa-info"></i> Note:
+                </div>
+
+                <p>As you see from the example above we have a block of code that gets executed after the If statement.</p>
+                <P>In other programming languages Indentation is only used to make the code easier to read. But in Python an error would occur.</P>
+
+                <!-- <div class="alert alert-success">
+                    <i class="fas fa-info"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, animi?
+                </div> -->
+                <br>
+                <p><b>Interactive Code</b></p>
+                
+
+                <iframe src="https://trinket.io/embed/python/aac402d05d" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+                <br>
+                <br>
+
+                <script> 
+                    function submitAnswers() {
+                        var q1 = document.forms["quizForm"]["q"].value;
+                        var q2 = document.forms["quizForm"]["q2"].value;
+                        var r = "r"
+                        var w = "w"
+
+                        if(q1 == r){
+                            document.getElementById("demo").innerHTML = "Well done";
+                            document.getElementById("Ques1").classList.add("showAnswersRight");
+                            
+                        }else if(q1 == w){
+                            document.getElementById("demo").innerHTML = "Wrong";
+                            document.getElementById("Ques1").classList.add("showAnswersWrong");
+                        
+                        }else{
+                            document.getElementById("demo").innerHTML = "Please Select a option";
+                            document.getElementById("Ques1").classList.add("showAnswersNoSubmit");
+                        }
+
+                        if(q2 == r){
+                            document.getElementById("demo2").innerHTML = "Well done";
+                            document.getElementById("Ques2").classList.add("showAnswersRight");
+                            
+                        }else if(q2 == w){
+                            document.getElementById("demo2").innerHTML = "Wrong";
+                            document.getElementById("Ques2").classList.add("showAnswersWrong");
+                        
+                        }else{
+                            document.getElementById("demo2").innerHTML = "Please Select a option";
+                            document.getElementById("Ques2").classList.add("showAnswersNoSubmit");
+                        }
+
+
+                    }
+                    
+
+
+
+                </script>
+
+                <div class="cardQuiz ">
+
+                    <form name="quizForm" id="quizForm" >
+                        <div class="showAnswers" id="Ques1">
+                            <div class="LegQ2" id="LeQ2"><legend><b>1.</b> Who Were the Co-Founders of Rockstar?</legend></div>
+                            <input type="radio" name="q" value="r" id="q1a">A. Right answer<br>
+                            <input type="radio" name="q" value="w" id="q1b">B. Wrong Answer<br>
+                            <input type="radio" name="q" value="w" id="q1c">C. Wrong Answer<br>
+                            <input type="radio" name="q" value="w" id="q1d">D. Wrong Answer<br>
+                             <p id="demo">hello</p>
+                       </div>
+
+                           
+                        <div class="showAnswers" id="Ques2">
+                            <div class="LegQ2" id="LeQ2"><legend><b>2.</b> Who Were the Co-Founders of Rockstar?</legend></div>
+                            <input type="radio" name="q2" value="r" id="q2a">A. Right answer<br>
+                            <input type="radio" name="q2" value="w" id="q2b">B. Wrong Answer<br>
+                            <input type="radio" name="q2" value="w" id="q2c">C. Wrong Answer<br>
+                            <input type="radio" name="q2" value="w" id="q2d">D. Wrong Answer<br>
+                            <p id="demo2">hello</p>
+                        </div>
+
+                            <!-- <button onclick="submitAnswers()"  class="btn btn-primary">Click me</button> -->
+                            <a href='javascript:void();' class="btnleft btn-primary" onclick="submitAnswers()">Next</a>
+
+                            <!-- <input type="submit" value="Submit Answers"> -->                        
+                    </form>    
+                </div>
+                
+                <br>
+                
+
+
+
+                 <a href="#" class="btn btn-primary">Next</a>
+
+
+                <!-- <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima totam magni eius vitae velit id, atque veritatis! At, vero porro.</p>
+               
+                <h3>Requirements</h3>
+                <ul>
+                    <li>Windows 10, Mac OSX, Linux</li>
+                    <li>Node.js v12 or higher</li>
+                </ul>
+
+                <h3>Install</h3>
+                <p>Mac (Homebrew)</p>
+                <pre><code>$ brew install loruki-cli</code></pre>
+                <p>NPM</p>
+                <pre><code>$ npm install loruki-cli</code></pre>
+                <p>Yarn</p>
+                <pre><code>$ yarn install loruki-cli</code></pre> -->
+
+            </div>
+        </div>
+    </section>
+
+
+	<!-- head -->
+    	<!-- <section class="docs-head bg-primary py-3">
+            <div class="container grid">
+                <div>
+                    <h1 class="xl">Docs</h1>
+                    <p class="lead">
+                        Learn how to work with the Loriki platform
+                    </p>
+                </div>
+                <img src="images/docs.png" alt="">
+            </div>
+        </section> -->
+
+   
+
+
+
+	<!-- footer -->
+	<footer class="footer bg-dark py-5">
+        <div class="container grid grid-3">
+            <div>
+                <h1>PiyLearn
+                </h1>
+               <!--  <p>Copyright &copy; 2020</p> -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Tutorials</a></li>
+                    <li><a href="features.html">Projects</a></li>
+                    <!-- <li><a href="docs.html">Docs</a></li> -->
+                </ul>
+            </nav>
+            <div class="social">
+                <!-- <a href="#"><i class="fab fa-github fa-2x"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a> -->
+            </div>
+        </div>
+    </footer>
+
+	</body>
+	</html>
