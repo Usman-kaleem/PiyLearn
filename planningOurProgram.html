@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+	<link rel="stylesheet"  href="CSS/utilities.css">
+	<link rel="stylesheet"  href="CSS/style.css">
+    <script type="text/javascript" src="jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="QuizManager.js"></script>
+
+    <!-- py -3 -m http.serverv    -->
+    
+	<title> PiyLearn | Planning our Program</title>
+</head>
+<body>
+	<!-- Navebar -->
+	<div class="navbar">
+		<div class="container flex">
+			<h1 class="logo"> PiyLearn. </h1>
+			<nav>
+				<ul>
+					<li><a href="index.html"> Tutorials</a></li>
+					<li><a href="planningOurProject.html" class="top-nav-active" > Projects</a></li>
+					<!-- <li><a href="docs.html"> Docs</a></li> -->
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+<!-- #################################################################################################################################################################################################################################################-->          
+
+
+    <!-- Docs main -->
+    <section class="docs-main my-4">
+        <div class="container grid">
+             <div class="card bg-light p-3" id="nav-placeholder">
+                <!-- This is HTML form the Nav.html file -->
+                <script>
+                    $(function(){
+                        $("#nav-placeholder").load("Nav.html");
+                    });      
+                </script>
+            </div>
+
+
+<!-- #################################################################################################################################################################################################################################################-->          
+
+            <div class="card">
+                <h2><b>Planning our Program</b></h2>
+                <br>
+                <p>Using everything we learned we will be making a basic console application. This means we will be interacting with our program via the console. The application we will be building is a calculator.</p>
+                <p>When making any program it is important to plan before developing.</p>
+                
+                <h3>Program Requirments</h3>
+
+                <p>Lets see what the requirements for our calculator will be.</p>
+
+                <p> -    Basic addition, subtraction, division, and multiplication<br>
+                    -   Ability to do floor division and modulus <br>
+                    -   A powers calculator<br>
+                    -   Circle area and perimeter calculator<br>
+                    -   Temperature converter between F and C<br>
+                </p>
+
+                <br>
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+                <h3>Pseudo Code</h3>
+                <p>Now that we know what our system should include, we are now able to start planning our programs. We should plan out our program before making it so that we have a better understand of what we are doing. </p>
+                <p>One way to plan out our program is to use Pseudo code. Pseudo Code is basically writing our code in plain English. This makes it very easy to understand what our code will do.</p>
+                <p>No let us make some pseudo code for our program. Remember this is not real code.</p>
+
+                 <p><b>Pseudo Code:</b></p>
+                
+                <pre><code>
+Addition Method
+Returns A + B
+
+Subtraction Method
+Returns A - B
+
+Multiplication Method
+Returns A x B
+
+Division Method
+Returns A / B
+
+Floor Division Method
+Returns A // B
+
+Modulus Method
+Returns A + B
+
+Exponentiation Method
+Returns A to the power of B
+
+Area of a Circle Method
+Returns pi r squared
+
+Perimeter of a Cercle Method
+Returns 2 pi R
+
+Celsius to Fahrenheit Converter Method
+Returns (Celsius × 9/5) + 32
+
+Fahrenheit to Celsius Converter Method
+Returns (Fahrenheit − 32) × 5/9 
+
+Ask user to select options for what calculation they would like to pick
+
+Print   Enter "A" For Addition
+Enter "B" For Subtraction
+Enter "C" For Multiplication
+Enter "D" For Division
+Enter "E" For Floor Divide
+Enter "F" For Modules
+Enter "G" To Calculate the Area Of A Circle
+Enter "H" To Calculate the Perimeter Of A Circle
+Enter "I" For Exponentiation
+Enter "J" To Convert Celsius to Fahrenheit
+Enter "K" To convert Fahrenheit to Celsius
+Enter "X" To Exit
+
+If "A" is selected
+    Ask user to 2 inputs. (A and B)
+    Return a + b
+
+Else If "B"  is selected
+    Ask user to 2 inputs. (A and B)
+    Return a – b
+
+Else If "C"  is selected
+    Ask user to 2 inputs. (A and B)
+    Return a x b
+
+Else If "D"  is selected
+    Ask user to 2 inputs. (A and B)
+    Return a / b
+
+Else If "E"  is selected
+    Ask user to 2 inputs. (A and B)
+    Return a // b
+
+Else If "F"  is selected
+    Ask user to 2 inputs. (A and B)
+    Return a % b
+
+Else If "G"  is selected
+    Ask user to 1 inputs. (Radios)
+    Return pi  r squared
+
+Else If "H"  is selected
+    Ask user to 1 inputs. (Radios)
+    Return 2 pi r
+
+Else If "I"  is selected
+    Ask user to 2 inputs. (A and B)
+    Return a ** b
+
+
+Else If "J"  is selected
+    Ask user to 1 inputs. (Celsius)
+    (Celsius × 9/5) + 32
+
+
+Else If "K"  is selected
+    Ask user to 1 inputs. (Fahrenheit)
+    (Fahrenheit − 32) × 5/9
+
+Else If "x"  is selected
+    End loop
+    Print "Goodbye"
+
+Else 
+    Print "Invalid input"
+                </code></pre>
+
+
+<!-- #################################################################################################################################################################################################################################################-->
+                
+                
+                
+                <br>
+                
+                <a href="codingTheProgram.html" class="btn btn-primary">Next</a>
+
+            </div>
+        </div>
+    </section>
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+	<!-- footer -->
+	<footer class="footer bg-dark py-5">
+        <div class="container grid grid-3">
+            <div>
+                <h1>PiyLearn
+                </h1>
+               <!--  <p>Copyright &copy; 2020</p> -->
+            </div>
+            <div class="social">
+                <!-- <a href="#"><i class="fab fa-github fa-2x"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a> -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Tutorials</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <!-- <li><a href="docs.html">Docs</a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+	</body>
+	</html>

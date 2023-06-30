@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+	<link rel="stylesheet"  href="CSS/utilities.css">
+	<link rel="stylesheet"  href="CSS/style.css">
+    <script type="text/javascript" src="jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="QuizManager.js"></script>
+
+    <!-- py -3 -m http.serverv    -->
+    
+	<title> PiyLearn | Tuples </title>
+</head>
+<body>
+	<!-- Navebar -->
+	<div class="navbar">
+		<div class="container flex">
+			<h1 class="logo"> PiyLearn. </h1>
+			<nav>
+				<ul>
+					<li><a class="top-nav-active" href="index.html"> Tutorials</a></li>
+					<li><a href="planningourprogram.html"> Projects</a></li>
+					<!-- <li><a href="docs.html"> Docs</a></li> -->
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+<!-- #################################################################################################################################################################################################################################################-->          
+
+
+    <!-- Docs main -->
+    <section class="docs-main my-4">
+        <div class="container grid">
+             <div class="card bg-light p-3" id="nav-placeholder">
+                <!-- This is HTML form the Nav.html file -->
+                <script>
+                    $(function(){
+                        $("#nav-placeholder").load("Nav.html");
+                    });      
+                </script>
+            </div>
+
+
+<!-- #################################################################################################################################################################################################################################################-->          
+
+            <div class="card">
+                <h2><b>Tuples</b></h2>
+                <br>
+                <p>Tuples are very similar to lists, we can store multiple values into a tuple just like a list. However, Tuples, unlike lists, are unchangeable meaning that a item can not be removed, edited or added after a tuple has been made.</p>
+                <p>A Tuple is by using double brackets () instead of the square brackets [] that are used with lists</p>
+                <br>
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+listOfNames = ("Susan", "Kevin", "Frank")
+listOfAges = (23, 54, 56)
+
+print(listOfNames)
+print(listOfAges)
+                </code></pre>
+                <br>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+('Susan', 'Kevin', 'Frank')
+(23, 54, 56)
+                </code></pre>
+
+         
+
+                <br>
+<!-- #################################################################################################################################################################################################################################################-->
+
+                <h3>Tuple Index</h3>
+                <p>Indexing a Tuple works the same way we index a list. We can access a specific element of a tuple based on position, otherwise known as its index.</p>
+
+                <table class="tg">
+                    <thead>
+                      <tr>
+                        <th class="tg-0pky">tupleOfAges</th>
+                        <th class="tg-0pky">32</th>
+                        <th class="tg-0pky">23</th>
+                        <th class="tg-0pky">46</th>
+                        <th class="tg-0pky">24</th>
+                        <th class="tg-0pky">19</th>
+                        <th class="tg-0pky">4</th>
+                        <th class="tg-0pky">23</th>
+                        <th class="tg-0pky">45</th>
+                        <th class="tg-0pky">55</th>
+                        <th class="tg-0pky">4</th>
+                        <th class="tg-0pky">5</th>
+                        <th class="tg-0pky">74</th>
+                        <th class="tg-0pky">1</th>
+                        <th class="tg-0pky">24</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="tg-0pky">Index</td>
+                        <td class="tg-0pky">0</td>
+                        <td class="tg-0pky">1</td>
+                        <td class="tg-0pky">2</td>
+                        <td class="tg-0pky">3</td>
+                        <td class="tg-0pky">4</td>
+                        <td class="tg-0pky">5</td>
+                        <td class="tg-0pky">6</td>
+                        <td class="tg-0pky">7</td>
+                        <td class="tg-0pky">8</td>
+                        <td class="tg-0pky">9</td>
+                        <td class="tg-0pky">10</td>
+                        <td class="tg-0pky">11</td>
+                        <td class="tg-0pky">12</td>
+                        <td class="tg-0pky">13</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-0pky">Negative Index</td>
+                        <td class="tg-0pky">-14</td>
+                        <td class="tg-0pky">-13</td>
+                        <td class="tg-0pky">-12</td>
+                        <td class="tg-0pky">-11</td>
+                        <td class="tg-0pky">-10</td>
+                        <td class="tg-0pky">-9</td>
+                        <td class="tg-0pky">-8</td>
+                        <td class="tg-0pky">-7</td>
+                        <td class="tg-0pky">-6</td>
+                        <td class="tg-0pky">-5</td>
+                        <td class="tg-0pky">-4</td>
+                        <td class="tg-0pky">-3</td>
+                        <td class="tg-0pky">-2</td>
+                        <td class="tg-0pky">-1</td>
+                      </tr>
+                    </tbody>
+                </table>
+                
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+tupleOfNames = ("Susan", "Kevin", "Frank", "Tom", "Ashe", "Bill", "Slim", "Shady")
+tupleOfAges = (23, 54, 56, 35, 36, 21, 46, 75, 32, 46)
+
+print(tupleOfNames[0]) # This will get the first element
+print(tupleOfAges[3]) # This will get the third
+print(tupleOfAges[-4]) # This will second last element
+print(tupleOfNames[0:-3]) # from the start up to but not including the second last element
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+Susan
+35
+46
+('Susan', 'Kevin', 'Frank', 'Tom', 'Ashe')
+
+                </code></pre>
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+                <h3>Using For Loops</h3>
+                <p>We can use for Loops to iterate through every element in Tuple.</p>
+                
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+tupleOfNames = ("Susan", "Kevin", "Frank", "Tom", "Ashe", "Bill", "Slim", "Shady")
+tupleOfAges = (23, 54, 56, 35, 36, 21, 46, 75, 32, 46)
+
+for i in tupleOfNames:
+  print(i)
+  
+for i in tupleOfAges:
+  print(i)
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+Susan
+Kevin
+Frank
+Tom
+Ashe
+Bill
+Slim
+Shady
+23
+54
+56
+35
+36
+21
+46
+75
+32
+46
+                </code></pre>
+
+                <p>Let us use a for loop with the range method.</p>
+
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+tupleOfNames = ("Susan", "Kevin", "Frank", "Tom", "Ashe", "Bill", "Slim", "Shady")
+tupleOfAges = (23, 54, 56, 35, 36, 21, 46, 75, 32, 46)
+
+tupleSize1 = len(tupleOfNames) # len() is a method that returns the size of a tuple
+tupleSize2 =  len(tupleOfAges) 
+
+for i in range(tupleSize1):
+  print(tupleOfNames[i])
+  
+for i in range(tupleSize2):
+  print(tupleOfAges[i])
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+Susan
+Kevin
+Frank
+Tom
+Ashe
+Bill
+Slim
+Shady
+23
+54
+56
+35
+36
+21
+46
+75
+32
+46
+                </code></pre>
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+            <h3>Changing Values in a tuple</h3>
+
+                <p>Remember how we said that Tuples are immutable, meaning that they can not be changed or edited once they have been created. There is a loophole we can use to get around this however, we can convert the tuple into a list, make the necessary changes, then reconvert it back into a tuple. This sound complicated but it is actually very simple.</p>
+                
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+tupleOfNames = ("Susan", "Kevin", "Frank", "Tom", "Ashe", "Bill", "Slim", "Shady")
+print(tupleOfNames)
+print("")
+
+listConvert = list(tupleOfNames)
+listConvert.append("Andrew")
+listConvert.sort()
+tupleOfNames = tuple(listConvert)
+
+print(tupleOfNames)
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+('Susan', 'Kevin', 'Frank', 'Tom', 'Ashe', 'Bill', 'Slim', 'Shady')
+
+('Andrew', 'Ashe', 'Bill', 'Frank', 'Kevin', 'Shady', 'Slim', 'Susan', 'Tom')
+                </code></pre>
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+<h3>Unpacking Tuples</h3>
+
+                <p>Using tuples we can extract values and assign them to a variable.</p>
+                
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+tupleOfNames = ("Susan", "Kevin", "Bill", "Slim", "Shady")
+(name1, name2, name3, name4, name5) = tupleOfNames
+
+print(name2)
+print(name5)
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+Kevin
+Shady
+                </code></pre>
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+<h3>Join Tuples</h3>
+
+                <p>Now let us see how we can join two list together.</p>
+                
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+tupleOfNames = ("Susan", "Kevin", "Frank", "Tom", "Ashe", "Bill", "Slim", "Shady")
+tupleOfAges = (23, 54, 56, 35, 36, 21, 46, 75, 32, 46)
+
+joinedTuple= tupleOfNames + tupleOfAges
+
+print(joinedTuple)
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+('Susan', 'Kevin', 'Frank', 'Tom', 'Ashe', 'Bill', 'Slim', 'Shady', 23, 54, 56, 
+35, 36, 21, 46, 75, 32, 46)
+                </code></pre>
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+<h3>Useful Tuple Methods</h3>
+
+                <p>Let us have a look at some useful methods we can use with tuple. These methods are already built-in to python. We have already looked at some of these above.</p>
+                
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+tupleOfNames = ("Susan", "Kevin", "Frank", "Tom", "Ashe", "Bill", "Slim", "Shady")
+tupleOfOtherNames = ("George", "Sam", "Eza", "Mike", "hannibal")
+
+
+
+# len() method returns the size of a given tuple
+print("len() Method:")
+print(len(tupleOfNames))
+print("")
+
+# count() method returns how many a ceritain value appares 
+print("count() method:")
+print(tupleOfNames.count("Frank"))
+print(tupleOfNames.count("Tom"))
+print("")
+
+# index() method tells us the index of a given value that is in the list
+print("insert() method:")
+a = tupleOfOtherNames.index("Sam")
+print(a)
+print("")
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+len() Method:
+8
+
+count() method:
+1
+1
+
+insert() method:
+1
+                </code></pre>
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+
+                <br>
+                <p><b>Interactive Code</b></p>
+                
+                <iframe src="https://trinket.io/embed/python/03ee63296f?runOption=run" width="100%" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe><br><br>
+                <h3>Quiz</h3>
+
+
+                <div class="cardQuiz ">
+
+                    <form name="quizForm" id="quizForm" >
+                        <div class="showAnswers" id="Ques1">
+                            <div class="LegQ2" id="LeQ2"><legend><b>1.</b> What symbol do we use to set tuples?</legend></div>
+                            <input type="radio" name="q" value="w" id="q1a">A. []<br>
+                            <input type="radio" name="q" value="r" id="q1b">B. ()<br>
+                            <input type="radio" name="q" value="w" id="q1c">C. <><br>
+                            <input type="radio" name="q" value="w" id="q1d">D. {}<br>
+                            <p id="demo">hello</p>
+                       </div>
+
+                           
+                        <div class="showAnswers" id="Ques2">
+                            <div class="LegQ2" id="LeQ2"><legend><b>2.</b> The <b>count()</b> method returns how large a list is?</legend></div>
+                            <input type="radio" name="q2" value="w" id="q2a">A. True<br>
+                            <input type="radio" name="q2" value="r" id="q2b">B. False<br>
+                            
+                            <p id="demo2">hello</p>
+                        </div>
+
+                            <!-- <button onclick="submitAnswers()"  class="btn btn-primary">Click me</button> -->
+                            <a href='javascript:void();' class="btnleft btn-primary" onclick="submitAnswers()">Next</a>
+
+                            <!-- <input type="submit" value="Submit Answers"> -->                        
+                    </form>    
+                </div>
+                
+                <br>
+                
+                <a href="sets.html" class="btn btn-primary">Next</a>
+
+            </div>
+        </div>
+    </section>
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+	<!-- footer -->
+	<footer class="footer bg-dark py-5">
+        <div class="container grid grid-3">
+            <div>
+                <h1>PiyLearn
+                </h1>
+               <!--  <p>Copyright &copy; 2020</p> -->
+            </div>
+            <div class="social">
+                <!-- <a href="#"><i class="fab fa-github fa-2x"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a> -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Tutorials</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <!-- <li><a href="docs.html">Docs</a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+	</body>
+	</html>

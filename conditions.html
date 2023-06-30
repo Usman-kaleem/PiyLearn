@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+	<link rel="stylesheet"  href="CSS/utilities.css">
+	<link rel="stylesheet"  href="CSS/style.css">
+    <script type="text/javascript" src="jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="QuizManager.js"></script>
+
+    <!-- py -3 -m http.serverv    -->
+    
+	<title> PiyLearn | Conditions </title>
+</head>
+<body>
+	<!-- Navebar -->
+	<div class="navbar">
+		<div class="container flex">
+			<h1 class="logo"> PiyLearn. </h1>
+			<nav>
+				<ul>
+					<li><a class="top-nav-active" href="index.html"> Tutorials</a></li>
+					<li><a href="planningourprogram.html"> Projects</a></li>
+					<!-- <li><a href="docs.html"> Docs</a></li> -->
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+<!-- #################################################################################################################################################################################################################################################-->          
+
+
+    <!-- Docs main -->
+    <section class="docs-main my-4">
+        <div class="container grid">
+             <div class="card bg-light p-3" id="nav-placeholder">
+                <!-- This is HTML form the Nav.html file -->
+                <script>
+                    $(function(){
+                        $("#nav-placeholder").load("Nav.html");
+                    });      
+                </script>
+            </div>
+
+
+<!-- #################################################################################################################################################################################################################################################-->          
+
+            <div class="card">
+                <h2><b>Conditions</b></h2>
+                <br>
+                <p>Previously we learned about operators, these operators returned either true or false. Now let’s see how we can use these true and false statements to run a block of code. We will be learning about, If statements, If Else statements, While Loops and For Loops</p>
+                
+
+                <h3>If Statements</h3>
+                <p>If we want to run a block of code only if a statements, we give meets a certain criteria (True) we use a if statement.</p>
+                
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+if True:
+  print("This will print because the If statement is true")
+  
+if False:
+  print("This will not print because the If statement is not true")
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+This will print because the If statement is true
+                </code></pre>
+
+                <div class="alert alert-success">
+                    <i class="fas fa-info"></i> Note:
+                    <p>As seen above any line of code that is indented after the if statement will be execute only if the condition it true. Let’s try another example.</p>
+
+                </div>
+
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+age1 = 12
+age2 = 18
+
+if (age1 &gt;= 18):
+  print("You are " + str(age1) + " years old. Old enough to vote")
+
+if (age2 &gt;= 18):
+  print("You are " + str(age2) + " years old. Old enough to vote") 
+
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+You are 18 years old. Old enough to vote
+                </code></pre>
+
+                <p>Only the second if statement ran the line of code, this is because its condition was true. The variable age2 is greater or equal to 18, whilst age1 is not greater than or equal to 18.</p>
+                <div class="alert alert-success">
+                    <i class="fas fa-info"></i> Note:
+                    <p>Note: If you don’t remember what the str() method is, check out the concatenation under the strings tutorial we learned previously. All it does is convert an int into a string so we can concatenate.</p>
+
+                </div>
+<!-- #################################################################################################################################################################################################################################################-->
+
+                <h3>If Else and Elif Statements</h3>
+                <p>The If elif statement works exactly the same a if statement but has a second statement that only runs if the last statement was not true. An Else runs if all statements that proceed it are false.</p>
+                <p>Lets see how a Elif Statement works</p>
+                
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+if False:
+  print("If Statement 1 (if statement)")
+  
+elif True:
+  print("If statement 2 (elif statement)")
+
+else:
+  print("If statement 3 (else statement)")
+
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+If statement 2 (elif statement)
+                </code></pre>
+
+                <p>Lets test out how a else statement will work</p>
+
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+Now lets see how the else in a if statement works
+if False:
+  print("If Statement 1 (if statement)")
+  
+elif False:
+  print("If statement 2 (elif statement)")
+
+else:
+  print("If statement 3 (else statement)")
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+If statement 3 (else statement)
+                </code></pre>
+
+<!-- #################################################################################################################################################################################################################################################-->
+<h3>While Loop</h3>
+
+                <p>A while loop will run a block of code again and again for as long as a statement is True. This block can sometimes run forever if you are not careful however.  </p>
+                
+                
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+number = 10
+while number &it 150:
+  print("still in the while loop" + str(number))
+  number = number + 10
+  
+print("while loop has ended")
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+still in the while loop10
+still in the while loop20
+still in the while loop30
+still in the while loop40
+still in the while loop50
+still in the while loop60
+still in the while loop70
+still in the while loop80
+still in the while loop90
+still in the while loop100
+still in the while loop110
+still in the while loop120
+still in the while loop130
+still in the while loop140
+while loop has ended
+                </code></pre>
+
+                <p>Let us run through the code. We have a variable that is set to 10. The condition for the while loop is that while the variable “Number” is less than 150 run through the loop again and again until number is no longer less than 150. Every loop we add 10 to number until number is no longer smaller then 150. </p>
+
+<!-- #################################################################################################################################################################################################################################################-->
+                
+                <h3>Break</h3>
+
+                <p>We can use Break to leave a loop even if the condition has not yet been yet.</p>
+                
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+number = 10
+while number &it 150:
+  print("still in the while loop" + str(number))
+  number = number + 10
+  break
+  
+print("while loop has ended")
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+still in the while loop10
+while loop has ended
+                </code></pre>
+
+                <p>From the code above notice that as the loop started it printed out a statement then added ten to the variable number but before it could loop back round it was stopped by the break statement.</p>
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+                
+                <h3>Continue</h3>
+
+                <p>We can use Continue to go back to the start of the loop even if there is code that is still beneath.</p>
+                
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+number = 10
+while number &it 150:
+  print("still in the while loop" + str(number))
+  number = number + 20
+  continue
+  number = number + 5
+  
+print("while loop has ended") 
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+# -- Output --
+
+still in the while loop10
+still in the while loop30
+still in the while loop50
+still in the while loop70
+still in the while loop90
+still in the while loop110
+still in the while loop130
+while loop has ended
+                </code></pre>
+
+                <p>From the code above notice how the variable did not increment by 5, this is due to the continue statement that starts the loop from the beginning.</p>
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+                
+                <h3>For Range loops</h3>
+
+                <p>A for loop using the <b>range()</b> Function Allows us to loop through a block of code a set amount of times. The function adds 1 from 0 to a specific number, for example; if 10 is entered then the functions runs 10 times.</p>
+                
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+# here we set a normal variable
+name = "tommy" 
+
+# This is where we start our for loop. Don’t get confused with the 
+letter # “i” this is just another variable.
+for i in range(10):
+    print(name)
+    print(i) 
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+tommy
+0
+tommy
+1
+tommy
+2
+tommy
+3
+tommy
+4
+tommy
+5
+tommy
+6
+tommy
+7
+tommy
+8
+tommy
+9
+                </code></pre>
+
+                <p>From the code and code output above we can see that the code within the For loop ran 10 times. We First printed the variable “Name” then the variable “i”, we can also see how the values in the variable “i” changes.</p>
+
+<!-- #################################################################################################################################################################################################################################################-->
+                <br>
+                <p><b>Interactive Code</b></p>
+                
+                <iframe src="https://trinket.io/embed/python/3415df241a?runOption=run" width="100%" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe><br><br>
+
+
+                <div class="cardQuiz ">
+
+                    <form name="quizForm" id="quizForm" >
+                        <div class="showAnswers" id="Ques1">
+                            <div class="LegQ2" id="LeQ2"><legend><b>1.</b>Do conditions only run if the condition if false?</legend></div>
+                            <input type="radio" name="q" value="w" id="q1a">A. True<br>
+                            <input type="radio" name="q" value="r" id="q1b">B. False<br>
+                            
+                            <p id="demo">hello</p>
+                       </div>
+
+                           
+                        <div class="showAnswers" id="Ques2">
+                            <div class="LegQ2" id="LeQ2"><legend><b>2.</b> Does the continue keyword in a loop starts the code from the beginning? </legend></div>
+                            <input type="radio" name="q2" value="r" id="q2a">A. True<br>
+                            <input type="radio" name="q2" value="w" id="q2b">B. False<br>
+                            
+                            <p id="demo2">hello</p>
+                        </div>
+
+                            <!-- <button onclick="submitAnswers()"  class="btn btn-primary">Click me</button> -->
+                            <a href='javascript:void();' class="btnleft btn-primary" onclick="submitAnswers()">Next</a>
+
+                            <!-- <input type="submit" value="Submit Answers"> -->                        
+                    </form>    
+                </div>
+                
+                <br>
+                
+                <a href="functions.html" class="btn btn-primary">Next</a>
+
+            </div>
+        </div>
+    </section>
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+	<!-- footer -->
+	<footer class="footer bg-dark py-5">
+        <div class="container grid grid-3">
+            <div>
+                <h1>PiyLearn
+                </h1>
+               <!--  <p>Copyright &copy; 2020</p> -->
+            </div>
+            <div class="social">
+                <!-- <a href="#"><i class="fab fa-github fa-2x"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a> -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Tutorials</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <!-- <li><a href="docs.html">Docs</a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+	</body>
+	</html>

@@ -10,7 +10,7 @@
 
     <!-- py -3 -m http.serverv    -->
     
-	<title> PiyLearn | </title>
+	<title> PiyLearn | Functions</title>
 </head>
 <body>
 	<!-- Navebar -->
@@ -46,24 +46,23 @@
 <!-- #################################################################################################################################################################################################################################################-->          
 
             <div class="card">
-                <h2><b>Title</b></h2>
+                <h2><b>Functions</b></h2>
                 <br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla psariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <br>
+                <p>Say we want to write multiple lines of code, and we want to use this code multiple times. Instead of rewriting these lines of code several times, we can use somethings called a Function. We can now write out code and define it to a function, now every time we want to run this code we call the function.</p>
+                <h3>Defining our Function</h3>
+
                 <p><b>Code Example:</b></p>
                 
                 <pre><code>
-X = 11
-Y = 3
+print("Hello this line of code is not part a Function\n")
 
-If X > Y 
-    Print(“X is larger then Y”) 
-    Print(“Y is not larger then X”)
+# This is where our function starts
+def Our_Function():
+  print("Hello this is from code that is in a function")
+  a = 1
+  b = 2
+  print(a + b)
+  print("")
                 </code></pre>
                 <br>
 
@@ -72,90 +71,131 @@ If X > Y
                 <pre><code>
 # --Output--
 
-X = 11
-Y = 3
-
-If X > Y 
-    Print(“X is larger then Y”) 
-    Print(“Y is not larger then X”)
+Hello this line of code is not part a Function
                 </code></pre>
 
-         
+                <p>From the code above we have made our function. However, notice that the code within our function did not run, this is because we have not called our function, we have just defined it. </p>
 
                 <br>
 
 <!-- #################################################################################################################################################################################################################################################-->
+                
+                <h3>Calling our function</h3>
 
-                <div class="alert alert-success">
-                    <i class="fas fa-info"></i> Note:
-                </div>
+                <p>So, let us see how we can call this function.</p>
+                
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+number = 10
+while number &it 150:
+  print("still in the while loop" + str(number))
+  number = number + 10
+  break
+  
+print("while loop has ended")
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+Hello this line of code is not part a Function
+
+Hello this is from code that is in a function
+3
+                </code></pre>
+
+                <p>From the code above notice that as the loop started it printed out a statement then added ten to the variable number but before it could loop back round it was stopped by the break statement.</p>
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+                <h3>Using Parameters in a Function</h3>
+
+                <p>Notice how a function has parameters “()” at the end. We can use these parameters to input Values into our functions. Let us see how we can do this.p>
+                
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+# We put a variable into these parameters, this variable can be used in #the function 
+def WhatsYourName(name):
+  print("Hello, my name is " + name)
+
+# When we call the function put a value in the parameters
+WhatsYourName("Tommy")
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+Hello, my name is Tommy
+                </code></pre>
+
+                <p>We can add multiple variables (or arguments) within a single parameter.</p>
+
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+# Here we are adding multiple arguments and separating them with commas
+def NumberCalculation(num1, num2, num3):
+  print((num1 + num2) / num3)
+
+NumberCalculation(10,7,2)   # Outputs (10 + 7)/ 2
+NumberCalculation(20,10)  # This one is missing an value, we need 3 but only have 2
+
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+TypeError: NumberCalculation() takes exactly 3 arguments (2 given) at &it;unknown&gt;
+                </code></pre>
 
                 <div class="alert alert-error">
                     <i class="fas fa-info"></i> Note:
+                    <p>Notice how we get an error because the number of arguments needed and the number of arguments given don’t match up.</p>
                 </div>
 
-                <p>As you see from the example above we have a block of code that gets executed after the If statement.</p>
-                <P>In other programming languages Indentation is only used to make the code easier to read. But in Python an error would occur.</P>
 
-<!-- #################################################################################################################################################################################################################################################-->
 
-                <h3>Complex</h3>
-                <p>A complex number is a float but with a ‘j’ at the end. This ‘j’ represents an imaginary number. For example: 2.501j, and 23.43e14j</p>
-                
-                <p><b>Code Example:</b></p>
-                
-                <pre><code>
-complexNumber1 = 21.54+3j
-complexNumber2 = -842.002j
-complexNumber3 = 23.4E16j
-
-print(type(complexNumber1))
-print(type(complexNumber2))
-print(type(complexNumber3))
-                </code></pre>
-
-                <p><b>Code Output:</b></p>
-
-                <pre><code>
-# --Output--
-
-&itclass 'complex'&gt
-&itclass 'complex'&gt
-&itclass 'complex'&gt
-                </code></pre>
 
 <!-- #################################################################################################################################################################################################################################################-->
 
                 <br>
                 <p><b>Interactive Code</b></p>
                 
-                <iframe src="https://trinket.io/embed/python/aac402d05d" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe><br><br>
+                <iframe src="https://trinket.io/embed/python/2d7b5fa6c0?runOption=run" width="100%" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></iframe><br><br>
 
                 <h3>Quiz</h3>
+
+
                 <div class="cardQuiz ">
 
                     <form name="quizForm" id="quizForm" >
                         <div class="showAnswers" id="Ques1">
-                            <div class="LegQ2" id="LeQ2"><legend><b>1.</b> Who Were the Co-Founders of Rockstar?</legend></div>
-                            <input type="radio" name="q" value="r" id="q1a">A. Right answer<br>
-                            <input type="radio" name="q" value="w" id="q1b">B. Wrong Answer<br>
-                            <input type="radio" name="q" value="w" id="q1c">C. Wrong Answer<br>
-                            <input type="radio" name="q" value="w" id="q1d">D. Wrong Answer<br>
+                            <div class="LegQ2" id="LeQ2"><legend><b>1.</b> What happens if we the number of arguments needed and the number of arugmens given don’t match?</legend></div>
+                            <input type="radio" name="q" value="w" id="q1a">A. The code runs normally<br>
+                            <input type="radio" name="q" value="r" id="q1b">B. There is an error<br>
+                            
                             <p id="demo">hello</p>
                        </div>
 
                            
                         <div class="showAnswers" id="Ques2">
-                            <div class="LegQ2" id="LeQ2"><legend><b>2.</b> Who Were the Co-Founders of Rockstar?</legend></div>
-                            <input type="radio" name="q2" value="r" id="q2a">A. Right answer<br>
-                            <input type="radio" name="q2" value="w" id="q2b">B. Wrong Answer<br>
-                            <input type="radio" name="q2" value="w" id="q2c">C. Wrong Answer<br>
-                            <input type="radio" name="q2" value="w" id="q2d">D. Wrong Answer<br>
+                            <div class="LegQ2" id="LeQ2"><legend><b>2.</b>The <b>Func</b> keyword is used to define a function?</legend></div>
+                            <input type="radio" name="q2" value="r" id="q2a">A. True<br>
+                            <input type="radio" name="q2" value="w" id="q2b">B. False<br>
+                            
                             <p id="demo2">hello</p>
                         </div>
 
                             <!-- <button onclick="submitAnswers()"  class="btn btn-primary">Click me</button> -->
-                            <a href='javascript:void();' class="btnleft btn-primary" onclick="submitAnswers()">Submit</a>
+                            <a href='javascript:void();' class="btnleft btn-primary" onclick="submitAnswers()">Next</a>
 
                             <!-- <input type="submit" value="Submit Answers"> -->                        
                     </form>    
@@ -163,7 +203,7 @@ print(type(complexNumber3))
                 
                 <br>
                 
-                <a href="#" class="btn btn-primary">Next</a>
+                <a href="lists.html" class="btn btn-primary">Next</a>
 
             </div>
         </div>
@@ -188,7 +228,7 @@ print(type(complexNumber3))
             <nav>
                 <ul>
                     <li><a href="index.html">Tutorials</a></li>
-                    <li><a href="planningOurProject.html">Projects</a></li>
+                    <li><a href="project.html">Projects</a></li>
                     <!-- <li><a href="docs.html">Docs</a></li> -->
                 </ul>
             </nav>

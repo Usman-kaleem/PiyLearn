@@ -7,17 +7,22 @@
 	<link rel="stylesheet"  href="CSS/style.css">
     <script type="text/javascript" src="jquery-3.6.0.js"></script>
     <script type="text/javascript" src="QuizManager.js"></script>
-	<title> PyLearn | Learn The Basics of Python </title>
+
+    <title> PyLearn | Learn The Basics of Python </title>
+    
 </head>
 <body>
+    
 	<!-- Navebar -->
+
+
 	<div class="navbar">
 		<div class="container flex">
 			<h1 class="logo"> PyLearn. </h1>
 			<nav>
 				<ul>
 					<li><a href="index.html" class="top-nav-active"> Tutorials</a></li>
-					<li><a href="planningourprogram.html" > Projects</a></li>
+					<li><a href="planningourprogram.html"> Projects</a></li>
 					<!-- <li><a href="docs.html"> Docs</a></li> -->
 				</ul>
 			</nav>
@@ -27,6 +32,7 @@
     <!-- Docs main -->
     <section class="docs-main my-4">
         <div class="container grid">
+
             <div class="card bg-light p-3" id="nav-placeholder">
                 <!-- This is HTML form the Nav.html file -->
                 <script>
@@ -36,70 +42,52 @@
                 </script>
             </div>
 
-            
             <div class="card">
-                <h2>Comments</h2>
+                <h2>Indentation</h2>
                 <br>
-                <p>In Python we use Comments to add notes into our code. These notes are not executed by python and are only for humans to read. We use the ‘#’ symbol when we want to add a comment.</p>
+                <p>In Python we use Indentation to signify a block of code. Indentation is the blank space in front of a line of code, this is done by pressing the “Tab” button on the keyboard.</p>
+
                 <br>
                 <p>Code Example:</p>
                 <pre><code>
-# This is a comment 
-Print(“Hi, my name is”) 
-Print(“Chika-Chika”)
-Print(“Slim Shady”)
-# These three lines of code print three statements
+X = 1
+Y = 3
+
+If X > Y 
+    Print(“X is larger then Y”) 
+    Print(“Y is not larger then X”)
                 </code></pre>
 
-                <p>We also have multiline comments. To do this sandwich your comment in between 3 speech marks (“””).</p>
-                <pre><code>
-"""  This is a comment 
-These three lines of code 
-print three statements """
-
-Print(“Hi, my name is”) 
-Print(“Chika-Chika”)
-Print(“Slim Shady”)
-                </code></pre>
-
-                <p>We can also used comments to comment out lines of code, meaning these will not run.</p>
-                <pre><code>
-#Print(“Hi, my name is”) 
-#Print(“Chika-Chika”)
-Print(“Slim Shady”)
-                </code></pre>
+                <p>As you see from the example above we have a block of code that gets executed after the If statement.</p>
+                <P>In other programming languages Indentation is only used to make the code easier to read. But in Python an error would occur.</P>
 
                 <!-- <div class="alert alert-success">
                     <i class="fas fa-info"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, animi?
                 </div> -->
                 <br>
 
-            
-                <iframe src="https://trinket.io/embed/python/e24e31d73e?runOption=run" width="100%" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <<iframe src="https://trinket.io/embed/python/f6332af621?runOption=run" width="100%" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></iframe>
 
                 <h3>Quiz</h3>
                 <div class="cardQuiz ">
 
                     <form name="quizForm" id="quizForm" >
                         <div class="showAnswers" id="Ques1">
-                            <div class="LegQ2" id="LeQ2"><legend><b>1.</b> What Character is used to make a string in python?</legend></div>
-                            <input type="radio" name="q" value="r" id="q1a">A. #<br>
-                            <input type="radio" name="q" value="w" id="q1b">B. //<br>
-                            <input type="radio" name="q" value="w" id="q1c">C. **<br>
-                            <input type="radio" name="q" value="w" id="q1d">D. %<br>
+                            <div class="LegQ2" id="LeQ2"><legend><b>1.</b> Indentation is not functional in Python. No errors will occur if it is not used where needed.</legend></div>
+                            <input type="radio" name="q" value="w" id="q1a">A. True<br>
+                            <input type="radio" name="q" value="r" id="q1b">B. False<br>
+                            
                             <p id="demo">hello</p>
                        </div>
 
                            
                         <div class="showAnswers" id="Ques2">
-                            <div class="LegQ2" id="LeQ2"><legend><b>2.</b> Comments will run like normal code when the program is run?</legend></div>
-                            <input type="radio" name="q2" value="w" id="q2a">A. Ture<br>
-                            <input type="radio" name="q2" value="r" id="q2b">B. False<br>
-                            
+                            <div class="LegQ2" id="LeQ2"><legend><b>2.</b> The Tab Key is use to make an indentation?</legend></div>
+                            <input type="radio" name="q2" value="r" id="q2a">A. True<br>
+                            <input type="radio" name="q2" value="w" id="q2b">B. False<br>
+    
                             <p id="demo2">hello</p>
                         </div>
-
-
 
                             <!-- <button onclick="submitAnswers()"  class="btn btn-primary">Click me</button> -->
                             <a href='javascript:void();' class="btnleft btn-primary" onclick="submitAnswers()">Submit</a>
@@ -111,14 +99,47 @@ Print(“Slim Shady”)
                 <br>
                 <br>
 
-                 <a href="variables.html" class="btn btn-primary">Next</a>
+                 <a href="Comments.html" class="btn btn-primary">Next
+                 </a>
 
 
-                
+                <!-- <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima totam magni eius vitae velit id, atque veritatis! At, vero porro.</p>
+               
+                <h3>Requirements</h3>
+                <ul>
+                    <li>Windows 10, Mac OSX, Linux</li>
+                    <li>Node.js v12 or higher</li>
+                </ul>
+
+                <h3>Install</h3>
+                <p>Mac (Homebrew)</p>
+                <pre><code>$ brew install loruki-cli</code></pre>
+                <p>NPM</p>
+                <pre><code>$ npm install loruki-cli</code></pre>
+                <p>Yarn</p>
+                <pre><code>$ yarn install loruki-cli</code></pre> -->
 
             </div>
         </div>
     </section>
+
+
+	<!-- head -->
+    	<!-- <section class="docs-head bg-primary py-3">
+            <div class="container grid">
+                <div>
+                    <h1 class="xl">Docs</h1>
+                    <p class="lead">
+                        Learn how to work with the Loriki platform
+                    </p>
+                </div>
+                <img src="images/docs.png" alt="">
+            </div>
+        </section> -->
+
+   
+
 
 
 	<!-- footer -->

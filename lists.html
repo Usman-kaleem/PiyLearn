@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+	<link rel="stylesheet"  href="CSS/utilities.css">
+	<link rel="stylesheet"  href="CSS/style.css">
+    <script type="text/javascript" src="jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="QuizManager.js"></script>
+
+    <!-- py -3 -m http.serverv    -->
+    
+	<title> PiyLearn | Lists </title>
+</head>
+<body>
+	<!-- Navebar -->
+	<div class="navbar">
+		<div class="container flex">
+			<h1 class="logo"> PiyLearn. </h1>
+			<nav>
+				<ul>
+					<li><a class="top-nav-active" href="index.html"> Tutorials</a></li>
+					<li><a href="planningourprogram.html"> Projects</a></li>
+					<!-- <li><a href="docs.html"> Docs</a></li> -->
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+<!-- #################################################################################################################################################################################################################################################-->          
+
+
+    <!-- Docs main -->
+    <section class="docs-main my-4">
+        <div class="container grid">
+             <div class="card bg-light p-3" id="nav-placeholder">
+                <!-- This is HTML form the Nav.html file -->
+                <script>
+                    $(function(){
+                        $("#nav-placeholder").load("Nav.html");
+                    });      
+                </script>
+            </div>
+
+
+<!-- #################################################################################################################################################################################################################################################-->          
+
+            <div class="card">
+                <h2><b>Lists</b></h2>
+                <br>
+                <p>Say we want to store multiple items in one single variable. We can do this by using a List, one of four data storage collections. To create a list, we use square brackets [].</p>
+                <br>
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+listOfNames = ["Susan", "Kevin", "Frank"]
+listOfAges = [23, 54, 56]
+
+print(listOfNames)
+print(listOfAges)
+                </code></pre>
+                <br>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+['Susan', 'Kevin', 'Frank']
+[23, 54, 56]
+                </code></pre>
+
+
+         
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+                <h3>List Index</h3>
+                <p>We can access a specific element of a list based on position, otherwise known as its index.</p>
+
+                <table class="tg">
+                    <thead>
+                      <tr>
+                        <th class="tg-0pky">listOfAges</th>
+                        <th class="tg-0pky">32</th>
+                        <th class="tg-0pky">23</th>
+                        <th class="tg-0pky">46</th>
+                        <th class="tg-0pky">24</th>
+                        <th class="tg-0pky">19</th>
+                        <th class="tg-0pky">4</th>
+                        <th class="tg-0pky">23</th>
+                        <th class="tg-0pky">45</th>
+                        <th class="tg-0pky">55</th>
+                        <th class="tg-0pky">4</th>
+                        <th class="tg-0pky">5</th>
+                        <th class="tg-0pky">74</th>
+                        <th class="tg-0pky">1</th>
+                        <th class="tg-0pky">24</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="tg-0pky">Index</td>
+                        <td class="tg-0pky">0</td>
+                        <td class="tg-0pky">1</td>
+                        <td class="tg-0pky">2</td>
+                        <td class="tg-0pky">3</td>
+                        <td class="tg-0pky">4</td>
+                        <td class="tg-0pky">5</td>
+                        <td class="tg-0pky">6</td>
+                        <td class="tg-0pky">7</td>
+                        <td class="tg-0pky">8</td>
+                        <td class="tg-0pky">9</td>
+                        <td class="tg-0pky">10</td>
+                        <td class="tg-0pky">11</td>
+                        <td class="tg-0pky">12</td>
+                        <td class="tg-0pky">13</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-0pky">Negative Index</td>
+                        <td class="tg-0pky">-14</td>
+                        <td class="tg-0pky">-13</td>
+                        <td class="tg-0pky">-12</td>
+                        <td class="tg-0pky">-11</td>
+                        <td class="tg-0pky">-10</td>
+                        <td class="tg-0pky">-9</td>
+                        <td class="tg-0pky">-8</td>
+                        <td class="tg-0pky">-7</td>
+                        <td class="tg-0pky">-6</td>
+                        <td class="tg-0pky">-5</td>
+                        <td class="tg-0pky">-4</td>
+                        <td class="tg-0pky">-3</td>
+                        <td class="tg-0pky">-2</td>
+                        <td class="tg-0pky">-1</td>
+                      </tr>
+                    </tbody>
+                    </table>
+                
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+listOfNames = ["Susan", "Kevin", "Frank", "Tom", "Ashe", "Bill", "Slim", "Shady"]
+listOfAges = [23, 54, 56, 35, 36, 21, 46, 75, 32, 46]
+
+print(listOfNames[0]) # This will get the first element
+print(listOfAges[2]) # This will get the third
+print(listOfAges[-2]) # This will second last element
+print(listOfNames[0:-2]) # from the start up to but not including the second last element
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+Susan
+56
+32
+['Susan', 'Kevin', 'Frank', 'Tom', 'Ashe', 'Bill']
+                </code></pre>
+
+
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+
+                <h3>Using For Loops </h3>
+                <p>We can use for Loops to iterate through every element in list.</p>
+                
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+listOfNames = ["Susan", "Kevin", "Frank", "Tom", "Ashe", "Bill", "Slim", "Shady"]
+listOfAges = [23, 54, 56, 35, 36, 21, 46, 75, 32, 46]
+
+for x in listOfNames:
+  print(x)
+  
+for x in listOfAges:
+  print(x)
+
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+Susan
+Kevin
+Frank
+Tom
+Ashe
+Bill
+Slim
+Shady
+23
+54
+56
+35
+36
+21
+46
+75
+32
+46
+                </code></pre>
+
+                <p>Lets use a for loop with the range method</p>
+
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+listOfNames = ["Susan", "Kevin", "Frank", "Tom", "Ashe", "Bill", "Slim", "Shady"]
+listOfAges = [23, 54, 56, 35, 36, 21, 46, 75, 32, 46]
+
+listSize1 = len(listOfNames) # len() is a method that returns the size of a list
+listSize2 =  len(listOfAges) # 
+
+for i in range(listSize1):
+  print(listOfNames[i])
+  
+for i in range(listSize2):
+  print(listOfAges[i])
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+Susan
+Kevin
+Frank
+Tom
+Ashe
+Bill
+Slim
+Shady
+23
+54
+56
+35
+36
+21
+46
+75
+32
+46
+                </code></pre>
+
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+                <h3>Sorting Lists</h3>
+                <p>Lets see how we can order a list base on alphabetical or numerical order</p>
+                
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+listOfNames = ["Susan", "Kevin", "Frank", "Tom", "Ashe", "Bill", "Slim", "Shady"]
+listOfAges = [23, 54, 56, 35, 36, 21, 46, 75, 32, 46]
+
+print(listOfNames)# prints the list as it currently is
+
+listOfNames.sort()
+print(listOfNames)# prints the list after being ordered alphabeticaly  
+
+print(listOfAges)# prints the list as it currently is
+
+listOfAges.sort()
+print(listOfAges)# prints the list after being ordered numericly   
+
+listOfAges.sort(reverse = True)
+print(listOfAges)# prints in decending order
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+['Susan', 'Kevin', 'Frank', 'Tom', 'Ashe', 'Bill', 'Slim', 'Shady']
+['Ashe', 'Bill', 'Frank', 'Kevin', 'Shady', 'Slim', 'Susan', 'Tom']
+[23, 54, 56, 35, 36, 21, 46, 75, 32, 46]
+[21, 23, 32, 35, 36, 46, 46, 54, 56, 75]
+[75, 56, 54, 46, 46, 36, 35, 32, 23, 21]
+                </code></pre>
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+                <h3>Copy List</h3>
+                <p>We can make copies of a list, copying a list allows us to make changes to the copied version without altering the original. </p>
+                <p>To see why Coping a list is useful lets first look at what happens when we just make one list equal to another using the “=”.</p>
+                <p><b>Coded Example:</b></p>
+                <pre><code>
+listOfNames = ["Susan", "Kevin", "Frank", "Tom", "Ashe", "Bill", "Slim", "Shady"]
+
+listOfNames2 = listOfNames #Here we are assining one list to another
+
+# These print statments will print the same list.
+print(listOfNames)
+print(listOfNames2)
+
+# but lets see what happens when we sort the first list in numeric order
+listOfNames.sort()
+
+print("")
+print(listOfNames)
+print(listOfNames2)
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+['Susan', 'Kevin', 'Frank', 'Tom', 'Ashe', 'Bill', 'Slim', 'Shady']
+['Susan', 'Kevin', 'Frank', 'Tom', 'Ashe', 'Bill', 'Slim', 'Shady']
+
+['Ashe', 'Bill', 'Frank', 'Kevin', 'Shady', 'Slim', 'Susan', 'Tom']
+['Ashe', 'Bill', 'Frank', 'Kevin', 'Shady', 'Slim', 'Susan', 'Tom']
+                </code></pre>
+
+                <p>Notice that listOfNames2 has also been changed. It changed because when using “=” for a list we are making our second list a reference to the original. So any changes made in the first list will be made in the second.</p>
+
+                <p>This is why we use the copy() method, we are able to make changes to the first list without affecting the second.</p>
+
+                <p><b>Code Example:</b></p>
+                <pre><code>
+listOfNames = ["Susan", "Kevin", "Frank", "Tom", "Ashe", "Bill", "Slim", "Shady"]
+
+listOfNames2 = listOfNames.copy()
+
+# These print statments will print the same list.
+print(listOfNames)
+print(listOfNames2)
+
+# but lets see what happens when we sort the first list in numeric order
+listOfNames.sort()
+
+print("")
+print(listOfNames)
+print(listOfNames2)
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+['Susan', 'Kevin', 'Frank', 'Tom', 'Ashe', 'Bill', 'Slim', 'Shady']
+['Susan', 'Kevin', 'Frank', 'Tom', 'Ashe', 'Bill', 'Slim', 'Shady']
+
+['Ashe', 'Bill', 'Frank', 'Kevin', 'Shady', 'Slim', 'Susan', 'Tom']
+['Susan', 'Kevin', 'Frank', 'Tom', 'Ashe', 'Bill', 'Slim', 'Shady']
+                </code></pre>
+                <p>As seen above notice that to second list did not change after changing the first.</p>
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+
+                <h3>Join List</h3>
+                <p>Now lets see how we can join two list together.</p>
+                
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+listOfNames = ["Susan", "Kevin", "Frank", "Tom", "Ashe", "Bill", "Slim", "Shady"]
+listOfAges = [23, 54, 56, 35, 36, 21, 46, 75, 32, 46]
+
+joinedList = listOfNames + listOfAges
+
+print(joinedList)
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+['Susan', 'Kevin', 'Frank', 'Tom', 'Ashe', 'Bill', 'Slim', 'Shady', 
+23, 54, 56, 35, 36, 21, 46, 75, 32, 46]
+                </code></pre>
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+
+                <h3>Useful List Methods</h3>
+                <p>Let’s have a look at some useful methods we can use with lists. These methods are already built-in to python. We have already looked at some of these above.</p>
+                
+                <p>We already looked at some list methods like: sort(), copy() and len(). But here are some we have not talked about.</p>
+                
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+listOfNames = ["Susan", "Kevin", "Frank", "Tom", "Ashe", "Bill", "Slim", "Shady", "Tom"]
+listOfOtherNames = ["George", "Sam", "Eza", "Mike", "hannibal"]
+
+# len() method returns the size of a given list
+print("len() Method:")
+print(len(listOfNames))
+print("")
+
+# count() method returns how many a ceritain value appares 
+print("count() method:")
+print(listOfNames.count("Frank"))
+print(listOfNames.count("Tom"))
+print("")
+
+# append() methods allows us to add another valuse to our list
+print("append() method:")
+listOfNames.append("Arnold")
+print(listOfNames)
+print("")
+
+# extend() method allows us to another list to our list
+print("extend() method:")
+listOfNames.extend(listOfOtherNames)
+print(listOfNames)
+print("")
+
+# insert() method allows us to add a element to a list at a given index position
+print("insert() method:")
+listOfOtherNames.insert(1, "Jackson")
+print(listOfOtherNames)
+print("")
+
+# index() method tells us the index of a given value that is in the list
+print("insert() method:")
+a =listOfOtherNames.index("Sam")
+print(a)
+print("")
+
+# pop() method removes a element at a given index
+print("pop() method:")
+print(listOfOtherNames)
+listOfOtherNames.pop(3)
+print(listOfOtherNames)
+print("")
+
+# remove() method removes a element at a given index
+print("remove() method:")
+print(listOfOtherNames)
+listOfOtherNames.remove("Jackson")
+print(listOfOtherNames)
+print("")
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+count() len:
+9
+
+count() method:
+1
+2
+
+append() method:
+['Susan', 'Kevin', 'Frank', 'Tom', 'Ashe', 'Bill', 'Slim', 'Shady', 'Tom', 'Arnold']
+
+extend() method:
+['Susan', 'Kevin', 'Frank', 'Tom', 'Ashe', 'Bill', 'Slim', 'Shady', 'Tom', 'Arnold', 
+'George', 'Sam', 'Eza', 'Mike', 'hannibal']
+
+insert() method:
+['George', 'Jackson', 'Sam', 'Eza', 'Mike', 'hannibal']
+
+insert() method:
+2
+
+pop() method:
+['George', 'Jackson', 'Sam', 'Eza', 'Mike', 'hannibal']
+['George', 'Jackson', 'Sam', 'Mike', 'hannibal']
+
+remove() method:
+['George', 'Jackson', 'Sam', 'Mike', 'hannibal']
+['George', 'Sam', 'Mike', 'hannibal']
+
+                </code></pre>
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+                <br>
+                <p><b>Interactive Code</b></p>
+                
+                <iframe src="https://trinket.io/embed/python/de88b48ed5?runOption=run" width="100%" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe><br><br>
+
+
+                <div class="cardQuiz ">
+
+                    <form name="quizForm" id="quizForm" >
+                        <div class="showAnswers" id="Ques1">
+                            <div class="LegQ2" id="LeQ2"><legend><b>1.</b> An index of a list start at which number?</legend></div>
+                            <input type="radio" name="q" value="r" id="q1a">A. 0<br>
+                            <input type="radio" name="q" value="w" id="q1b">B. 1<br>
+                            <input type="radio" name="q" value="w" id="q1c">C. -1<br>
+                            <input type="radio" name="q" value="w" id="q1d">D. 2<br>
+                            <p id="demo">hello</p>
+                       </div>
+
+                           
+                        <div class="showAnswers" id="Ques2">
+                            <div class="LegQ2" id="LeQ2"><legend><b>2.</b> The len() method returns a list?</legend></div>
+                            <input type="radio" name="q2" value="w" id="q2a">A. True<br>
+                            <input type="radio" name="q2" value="r" id="q2b">B. False<br>
+                            
+                            <p id="demo2">hello</p>
+                        </div>
+
+                            <!-- <button onclick="submitAnswers()"  class="btn btn-primary">Click me</button> -->
+                            <a href='javascript:void();' class="btnleft btn-primary" onclick="submitAnswers()">Next</a>
+
+                            <!-- <input type="submit" value="Submit Answers"> -->                        
+                    </form>    
+                </div>
+                
+                <br>
+                
+                <a href="tuples.html" class="btn btn-primary">Next</a>
+
+            </div>
+        </div>
+    </section>
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+	<!-- footer -->
+	<footer class="footer bg-dark py-5">
+        <div class="container grid grid-3">
+            <div>
+                <h1>PiyLearn
+                </h1>
+               <!--  <p>Copyright &copy; 2020</p> -->
+            </div>
+            <div class="social">
+                <!-- <a href="#"><i class="fab fa-github fa-2x"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a> -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Tutorials</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <!-- <li><a href="docs.html">Docs</a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+	</body>
+	</html>

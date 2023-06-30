@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+	<link rel="stylesheet"  href="CSS/utilities.css">
+	<link rel="stylesheet"  href="CSS/style.css">
+    <script type="text/javascript" src="jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="QuizManager.js"></script>
+
+    <!-- py -3 -m http.serverv    -->
+    
+	<title> PiyLearn | Strings </title>
+</head>
+<body>
+	<!-- Navebar -->
+	<div class="navbar">
+		<div class="container flex">
+			<h1 class="logo"> PiyLearn. </h1>
+			<nav>
+				<ul>
+					<li><a class="top-nav-active" href="index.html"> Tutorials</a></li>
+					<li><a href="planningourprogram.html"> Projects</a></li>
+					<!-- <li><a href="docs.html"> Docs</a></li> -->
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+<!-- #################################################################################################################################################################################################################################################-->          
+
+
+    <!-- Docs main -->
+    <section class="docs-main my-4">
+        <div class="container grid">
+             <div class="card bg-light p-3" id="nav-placeholder">
+                <!-- This is HTML form the Nav.html file -->
+                <script>
+                    $(function(){
+                        $("#nav-placeholder").load("Nav.html");
+                    });      
+                </script>
+            </div>
+
+
+<!-- #################################################################################################################################################################################################################################################-->          
+
+            <div class="card">
+                <h2><b>Strings</b></h2>
+                <br>
+                <p>String are a datatype in python, we can use this represent text. To make a string we sandwich the text with a double (“) or single(‘) quotation mark on both ends. For example: “Hello, World?”, ‘Hello, World!’, “123”.</p>
+                <br>
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+print("Hello, World!")
+
+greetingString = 'How are you doing?'
+print(greetingString)
+
+                </code></pre>
+                <br>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+Hello, World!
+How are you doing?
+                </code></pre>
+                
+                <p>If we use 3 single quotation marks on both ends, we will make a multiline string (you can use 3 double quotation marks too).</p>
+
+
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+multilineString = '''This is a 
+multiline string.
+As you can see it is on more than one line'''
+
+print(multilineString)
+                </code></pre>
+                <br>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+This is a 
+multiline string.
+As you can see it is on more than one line
+                </code></pre>
+
+
+
+<!-- #################################################################################################################################################################################################################################################-->
+                 <h3>Concatenation</h3>
+                <p>We can join two strings together using concatenation.</p>
+                
+                <p><b>Code Example:</b></p>              
+                <pre><code>
+string1 = "Hi, my name is "
+string2 = "Slim Shady!"
+
+concatString = string1 + string2
+
+print(concatString)
+                </code></pre>
+                <p><b>Code Output:</b></p>
+                <pre><code>
+# --Output--
+
+Hi, my name is Slim Shady!
+                </code></pre>
+
+                <p>Lets see what happens when we try concatenate a string and a number</p>
+
+                <p><b>Code Example:</b></p>  
+                <pre><code>
+string1 = "Hi, my age is "
+anInt = 32
+
+concatTest = string1 + anInt
+print(concatTest)
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+TypeError: can only concatenate str (not "int") to str
+                </code></pre>
+
+                <div class="alert alert-error">
+                    <i class="fas fa-info"></i> Note:
+                    <p>We get an error because we can not join a string and an int. We will have to cast this int to a string using the str() method.</p>
+                </div>
+
+                <p><b>Code Example:</b></p>              
+                <pre><code>
+string1 = "Hi, my age is "
+anInt = 32
+
+intConvert = str(anInt)
+
+concatTest = string1 + intConvert
+print(concatTest)
+                </code></pre>
+                <p><b>Code Output:</b></p>
+                <pre><code>
+# --Output--
+
+Hi, my age is 32
+                </code></pre>
+
+                
+<!-- #################################################################################################################################################################################################################################################-->
+
+<h3>Complex</h3>
+                <p>We can used String Slicing to get back sections of a string based on position, otherwise known as its index.</p>
+
+                
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0lax">String</th>
+    <th class="tg-0lax">H</th>
+    <th class="tg-0lax">i</th>
+    <th class="tg-0lax">,</th>
+    <th class="tg-0lax"></th>
+    <th class="tg-0lax">m</th>
+    <th class="tg-0lax">y</th>
+    <th class="tg-0lax"></th>
+    <th class="tg-0lax">n</th>
+    <th class="tg-0lax">a</th>
+    <th class="tg-0lax">m</th>
+    <th class="tg-0lax">e </th>
+    <th class="tg-0lax"></th>
+    <th class="tg-0lax">i</th>
+    <th class="tg-0lax">s</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">Index</td>
+    <td class="tg-0lax">0</td>
+    <td class="tg-0lax">1</td>
+    <td class="tg-0lax">2</td>
+    <td class="tg-0lax">3</td>
+    <td class="tg-0lax">4</td>
+    <td class="tg-0lax">5</td>
+    <td class="tg-0lax">6</td>
+    <td class="tg-0lax">7</td>
+    <td class="tg-0lax">8</td>
+    <td class="tg-0lax">9</td>
+    <td class="tg-0lax">10</td>
+    <td class="tg-0lax">11</td>
+    <td class="tg-0lax">12</td>
+    <td class="tg-0lax">13</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Negative Index</td>
+    <td class="tg-0lax">-14</td>
+    <td class="tg-0lax">-13</td>
+    <td class="tg-0lax">-12</td>
+    <td class="tg-0lax">-11</td>
+    <td class="tg-0lax">-10</td>
+    <td class="tg-0lax">-9</td>
+    <td class="tg-0lax">-8</td>
+    <td class="tg-0lax">-7</td>
+    <td class="tg-0lax">-6</td>
+    <td class="tg-0lax">-5</td>
+    <td class="tg-0lax">-4</td>
+    <td class="tg-0lax">-3</td>
+    <td class="tg-0lax">-2</td>
+    <td class="tg-0lax">-1</td>
+  </tr>
+</tbody>
+</table>
+                                
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+aString = "Hi, my name is"
+
+print("1) " + aString)
+print("2) " +aString[0])
+print("3) " +aString[1])
+print("4) " +aString[-2])
+print("5) " +aString[-5])
+print("6) " +aString[0:6])
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+1) Hi, my name is
+2) H
+3) i
+4) i
+5) m
+6) Hi, my
+                </code></pre>
+
+
+                <div class="alert alert-success">
+                    <i class="fas fa-info"></i> Note:
+                    <p>Note that print(aString[0]) printed the first letter ‘H’. In an index first position is always 0 and the second is 1. Spaces in between words also count as an index</p>
+                </div>
+
+                <p>Here are some more cool tricks we can do with string slicing.</p>
+
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+aString = "Hi, my name is"
+
+print(aString[:6]) # print characters from the start till index 6
+print(aString[3:]) # print characters starting from index 3 till the end
+print(aString[-10:-3]) #print starting from index -8 till but not including -2
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+Hi, my
+ my name is
+my name
+                </code></pre>
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+<h3>Escape Character</h3>
+                <p>Say we want to include a double quotation mark into our string, how will python react to this.</p>
+                
+                <p><b>Code Example:</b></p>
+                <pre><code>
+escapeString = "Hi, is your name "Tom" by any chance"
+print(escapeString)
+                </code></pre>
+                <p><b>Code Output:</b></p>
+                <pre><code>
+# --Output--
+
+SyntaxError: invalid syntax
+                </code></pre>
+
+                <div class="alert alert-error">
+                    <i class="fas fa-info"></i> Note:
+                    <p>As you can see, we get a syntax error. This is because tom is not part of the string. Lets try again but put a \ (backslash) inform of the double quotation marks. This tells python to ignore them.</p>
+                </div>
+
+                <p><b>Code Example:</b></p>
+                <pre><code>
+escapeString = "Hi, is your name "Tom" by any chance"
+print(escapeString)
+                </code></pre>
+                <p><b>Code Output:</b></p>
+                <pre><code>
+# --Output--
+
+Hi, is your name "Tom" by any chance?
+                </code></pre>
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+                <br>
+                <p><b>Interactive Code</b></p>
+                
+                <iframe src="https://trinket.io/embed/python/cdd9cfdb82?runOption=run" width="100%" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <br><br>
+
+
+                <div class="cardQuiz ">
+
+                    <form name="quizForm" id="quizForm" >
+                        <div class="showAnswers" id="Ques1">
+                            <div class="LegQ2" id="LeQ2"><legend><b>1.</b> Is a string a datatype that represents text?</legend></div>
+                            <input type="radio" name="q" value="w" id="q1a">A. No <br>
+                            <input type="radio" name="q" value="r" id="q1b">B. Yes <br>                     
+                            <p id="demo">hello</p>
+                       </div>
+
+                           
+                        <div class="showAnswers" id="Ques2">
+                            <div class="LegQ2" id="LeQ2"><legend><b>2.</b> Can we concatenate 23 and “Hello”?</legend></div>
+                            <input type="radio" name="q2" value="r" id="q2a">A. No<br>
+                            <input type="radio" name="q2" value="w" id="q2b">B. Yes <br>
+                            <p id="demo2">hello</p>
+                        </div>
+
+                            <!-- <button onclick="submitAnswers()"  class="btn btn-primary">Click me</button> -->
+                            <a href='javascript:void();' class="btnleft btn-primary" onclick="submitAnswers()">Next</a>
+
+                            <!-- <input type="submit" value="Submit Answers"> -->                        
+                    </form>    
+                </div>
+                
+                <br>
+                
+                <a href="basicmaths.html" class="btn btn-primary">Next</a>
+
+            </div>
+        </div>
+    </section>
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+	<!-- footer -->
+	<footer class="footer bg-dark py-5">
+        <div class="container grid grid-3">
+            <div>
+                <h1>PiyLearn
+                </h1>
+               <!--  <p>Copyright &copy; 2020</p> -->
+            </div>
+            <div class="social">
+                <!-- <a href="#"><i class="fab fa-github fa-2x"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a> -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Tutorials</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <!-- <li><a href="docs.html">Docs</a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+	</body>
+	</html>

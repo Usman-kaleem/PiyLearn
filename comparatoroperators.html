@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 	<link rel="stylesheet"  href="CSS/utilities.css">
 	<link rel="stylesheet"  href="CSS/style.css">
@@ -10,7 +10,7 @@
 
     <!-- py -3 -m http.serverv    -->
     
-	<title> PiyLearn | </title>
+	<title> PiyLearn | Comparator Operators </title>
 </head>
 <body>
 	<!-- Navebar -->
@@ -46,24 +46,23 @@
 <!-- #################################################################################################################################################################################################################################################-->          
 
             <div class="card">
-                <h2><b>Title</b></h2>
+                <h2><b>Comparator Operators </b></h2>
                 <br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla psariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <br>
+                <p>We can use comparison operators to compare values in python.</p>
+                <h3>Equals and Not Equals</h3>
+                <p>To see if two values are equal we can use this equals comparator operator. To use it in python is two equal symbols “==”, we can also use “!=” to see if a value is not equal to another. If a value is equal to another it will return <b>True</b> if it is not equal it will return <b>False</b>.</p>
                 <p><b>Code Example:</b></p>
                 
                 <pre><code>
-X = 11
-Y = 3
+a = 10
+b = 5
+c = 10
 
-If X > Y 
-    Print(“X is larger then Y”) 
-    Print(“Y is not larger then X”)
+print (a == b)
+print (a == c)
+print ("")
+print (a != b)
+print (a != c)
                 </code></pre>
                 <br>
 
@@ -72,12 +71,11 @@ If X > Y
                 <pre><code>
 # --Output--
 
-X = 11
-Y = 3
+False
+True
 
-If X > Y 
-    Print(“X is larger then Y”) 
-    Print(“Y is not larger then X”)
+True
+False
                 </code></pre>
 
          
@@ -85,33 +83,20 @@ If X > Y
                 <br>
 
 <!-- #################################################################################################################################################################################################################################################-->
-
-                <div class="alert alert-success">
-                    <i class="fas fa-info"></i> Note:
-                </div>
-
-                <div class="alert alert-error">
-                    <i class="fas fa-info"></i> Note:
-                </div>
-
-                <p>As you see from the example above we have a block of code that gets executed after the If statement.</p>
-                <P>In other programming languages Indentation is only used to make the code easier to read. But in Python an error would occur.</P>
-
-<!-- #################################################################################################################################################################################################################################################-->
-
-                <h3>Complex</h3>
-                <p>A complex number is a float but with a ‘j’ at the end. This ‘j’ represents an imaginary number. For example: 2.501j, and 23.43e14j</p>
+                <h3>Greater Than and Less Then</h3>
+                <p>To see if a values is either bigger or smaller that another we can use the Greater Then operator “&gt;” or the Less Then operator “&lt; ”. Depending on the operator used it will return True or False.</p>
                 
                 <p><b>Code Example:</b></p>
                 
                 <pre><code>
-complexNumber1 = 21.54+3j
-complexNumber2 = -842.002j
-complexNumber3 = 23.4E16j
+a = 10
+b = 5
+c = 10
 
-print(type(complexNumber1))
-print(type(complexNumber2))
-print(type(complexNumber3))
+print (a &gt; b)
+print (a < b)
+print (a &gt; c) # 10 is not bigger then 10 so this will be false
+Print (a > c) # 10 is not smaller then 10 so this will be false
                 </code></pre>
 
                 <p><b>Code Output:</b></p>
@@ -119,43 +104,106 @@ print(type(complexNumber3))
                 <pre><code>
 # --Output--
 
-&itclass 'complex'&gt
-&itclass 'complex'&gt
-&itclass 'complex'&gt
+True
+False
+False
+False
                 </code></pre>
+
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+<h3>Greater Than Or Equal To and Less Then Or Equal To</h3>
+                <p>To see if a values is either bigger or equal to or smaller or equal to that another we can use the Greater Then Or Equal To operator “&gt=” or the Less Then operator “&it;=”. Depending on the operator used it will return True or False.</p>
+                
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+a = 10
+b = 5
+c = 10
+
+print (a &gt= b)
+print (a <= b)
+print (a &gt= c) 
+rint (a <= c)
+
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+True
+False
+True
+True
+                </code></pre>
+
+
+<!-- #################################################################################################################################################################################################################################################-->
+                <h3>Logic Operators</h3>
+
+                <p>A logic operator is used when we want to compare some True or False statements. </p>
+                <p>“And” is used if we want to make sure all conditions meet a condition. For example: if we wanted to check if a variable with the value of 10 is both bigger then 10 AND 13. </p>
+                <p>“Or” is used if we want to make sure at least one condition is met. For example: if we wanted to check if a variable with the value of 10 is both bigger then 10 OR 13. </p>
+                
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+print (a &it;= 20 and a &it;= 30) 
+print (a &it;= 5 and a &it;= 30)
+print("")
+print (a &it;= 20 or a &it;= 30)
+print (a &it;= 5 or a &it;= 30)
+print (a &it;= 5 or a &it;= 9)
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+True
+False
+
+Ture
+True
+False
+                </code></pre>
+
 
 <!-- #################################################################################################################################################################################################################################################-->
 
                 <br>
                 <p><b>Interactive Code</b></p>
                 
-                <iframe src="https://trinket.io/embed/python/aac402d05d" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe><br><br>
+                <iframe src="https://trinket.io/embed/python/bf64d88d9e?runOption=run" width="100%" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe><br><br>
 
-                <h3>Quiz</h3>
+
                 <div class="cardQuiz ">
 
                     <form name="quizForm" id="quizForm" >
                         <div class="showAnswers" id="Ques1">
-                            <div class="LegQ2" id="LeQ2"><legend><b>1.</b> Who Were the Co-Founders of Rockstar?</legend></div>
-                            <input type="radio" name="q" value="r" id="q1a">A. Right answer<br>
-                            <input type="radio" name="q" value="w" id="q1b">B. Wrong Answer<br>
-                            <input type="radio" name="q" value="w" id="q1c">C. Wrong Answer<br>
-                            <input type="radio" name="q" value="w" id="q1d">D. Wrong Answer<br>
+                            <div class="LegQ2" id="LeQ2"><legend><b>1.</b> What is the output of print(10 >= 2) ?</legend></div>
+                            <input type="radio" name="q" value="r" id="q1a">A. True<br>
+                            <input type="radio" name="q" value="w" id="q1b">B. False<br>
+                            <input type="radio" name="q" value="w" id="q1c">C. 5<br>
+                            <input type="radio" name="q" value="w" id="q1d">D. 20<br>
                             <p id="demo">hello</p>
                        </div>
 
                            
                         <div class="showAnswers" id="Ques2">
-                            <div class="LegQ2" id="LeQ2"><legend><b>2.</b> Who Were the Co-Founders of Rockstar?</legend></div>
-                            <input type="radio" name="q2" value="r" id="q2a">A. Right answer<br>
-                            <input type="radio" name="q2" value="w" id="q2b">B. Wrong Answer<br>
-                            <input type="radio" name="q2" value="w" id="q2c">C. Wrong Answer<br>
-                            <input type="radio" name="q2" value="w" id="q2d">D. Wrong Answer<br>
+                            <div class="LegQ2" id="LeQ2"><legend><b>2.</b> Is this the greater then operator >= ?</legend></div>
+                            <input type="radio" name="q2" value="w" id="q2a">A. Yes<br>
+                            <input type="radio" name="q2" value="r" id="q2b">B. No<br>
                             <p id="demo2">hello</p>
                         </div>
 
                             <!-- <button onclick="submitAnswers()"  class="btn btn-primary">Click me</button> -->
-                            <a href='javascript:void();' class="btnleft btn-primary" onclick="submitAnswers()">Submit</a>
+                            <a href='javascript:void();' class="btnleft btn-primary" onclick="submitAnswers()">Next</a>
 
                             <!-- <input type="submit" value="Submit Answers"> -->                        
                     </form>    
@@ -163,7 +211,7 @@ print(type(complexNumber3))
                 
                 <br>
                 
-                <a href="#" class="btn btn-primary">Next</a>
+                <a href="conditions.html" class="btn btn-primary">Next</a>
 
             </div>
         </div>
@@ -188,7 +236,7 @@ print(type(complexNumber3))
             <nav>
                 <ul>
                     <li><a href="index.html">Tutorials</a></li>
-                    <li><a href="planningOurProject.html">Projects</a></li>
+                    <li><a href="project.html">Projects</a></li>
                     <!-- <li><a href="docs.html">Docs</a></li> -->
                 </ul>
             </nav>

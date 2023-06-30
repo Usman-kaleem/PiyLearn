@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+	<link rel="stylesheet"  href="CSS/utilities.css">
+	<link rel="stylesheet"  href="CSS/style.css">
+    <script type="text/javascript" src="jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="QuizManager.js"></script>
+
+    <!-- py -3 -m http.serverv    -->
+    
+	<title> PiyLearn | Sets </title>
+</head>
+<body>
+	<!-- Navebar -->
+	<div class="navbar">
+		<div class="container flex">
+			<h1 class="logo"> PiyLearn. </h1>
+			<nav>
+				<ul>
+					<li><a class="top-nav-active" href="index.html"> Tutorials</a></li>
+					<li><a href="planningourprogram.html"> Projects</a></li>
+					<!-- <li><a href="docs.html"> Docs</a></li> -->
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+<!-- #################################################################################################################################################################################################################################################-->          
+
+
+    <!-- Docs main -->
+    <section class="docs-main my-4">
+        <div class="container grid">
+             <div class="card bg-light p-3" id="nav-placeholder">
+                <!-- This is HTML form the Nav.html file -->
+                <script>
+                    $(function(){
+                        $("#nav-placeholder").load("Nav.html");
+                    });      
+                </script>
+            </div>
+
+
+<!-- #################################################################################################################################################################################################################################################-->          
+
+            <div class="card">
+                <h2><b>Sets</b></h2>
+                <br>
+                <p>Sets, like lists and tuples, are another data type that allows us to store multiple values, just like a list and tuple. However, Sets are a bit different, they are unordered; meaning that values inside cannot be reference by a index. They also do not allow for the same values to appear twice in a single set.</p>
+                <p>A Set is by using double squiggly brackets {} instead of the square brackets [] that are used with lists or normal brackets () used with tuples.</p>
+                <br>
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+setOfNames = {"Susan", "Kevin", "Frank"}
+setOfAges = {23, 54, 56}
+
+print(setOfNames)
+print(setOfAges)
+                </code></pre>
+                <br>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+{'Susan', 'Kevin', 'Frank'}
+{23, 54, 56}
+                </code></pre>
+
+         
+
+                <br>
+
+
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+                <h3>Using For Loops </h3>
+                <p>We can use for Loops to iterate through every element in Tuple.</p>
+                
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+setOfNames = {"Susan", "Kevin", "Frank", "Tom", "Ashe", "Bill", "Slim", "Shady"}
+setOfAges = {23, 54, 56, 35, 36, 21, 46, 75, 32, 46}
+
+for i in setOfNames:
+  print(i)
+  
+for i in setOfAges:
+  print(i)
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+Susan
+Kevin
+Frank
+Tom
+Ashe
+Bill
+Slim
+Shady
+23
+54
+56
+35
+36
+21
+46
+75
+32
+46
+                </code></pre>
+                <p>Remember using for loops with range will not work as we cannot index a set.</p>
+
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+setOfNames = {"Susan", "Kevin", "Frank", "Tom", "Ashe", "Bill", "Slim", "Shady"}
+
+setSize1 = len(setOfNames) # len() is a method that returns the size of a tuple
+
+for i in range(setSize1):
+  print(setOfNames[i])
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+line 8, in &itmodule&gt print(setOfNames[i]) TypeError: 'set' object does not support indexing
+                </code></pre>
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+                <h3>Adding and Removing Items</h3>
+                <p>Although we can edit items, we are able to add item to a set, to do this we can use a method called add().</p>
+                
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+setOfNames = {"Susan", "Kevin", "Frank", "Tom", "Ashe", "Bill", "Slim", "Shady"}
+
+setOfNames.add("Hancock")
+print(setOfNames)
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+{'Susan', 'Ashe', 'Shady', 'Slim', 'Kevin', 'Hancock', 'Bill', 'Tom', 'Frank'}
+                </code></pre>
+
+                <p>Note: Notice how ‘Hancock’ was not added to the end of the set, this is because there is no need as there are not indexes.  </p>
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+                <h3>Joining Sets</h3>
+                
+                
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+setOfNames = {"Susan", "Kevin", "Slim", "Shady"}
+setOfAges = {23, 54, 56, 35, 36, 21, 46, 75, 32, 46}
+listOfCars = ["Honda", "BMW", "VW", "Toyota"]
+
+setOfNames.update(setOfAges)
+setOfAges.update(listOfCars)
+
+print(setOfNames)
+print("")
+print(setOfAges)
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+{32, 'Susan', 35, 36, 'Shady', 75, 46, 'Slim', 23, 21, 'Kevin', 54, 56}
+
+{32, 'Honda', 35, 36, 'VW', 75, 46, 'Toyota', 'BMW', 21, 54, 23, 56}
+                </code></pre>
+
+                <p>Note: notice how we can update a set with a list too</p>
+
+                <p><b>Code Example:</b></p>
+                
+                <pre><code>
+setOfNames = {"Susan", "Kevin", "Slim", "Shady"}
+setOfAges = {23, 54, 56, 35, 36, 21, 46, 75, 32, 46}
+
+setOfNamesAndAges = setOfNames.union(setOfAges)
+print(setOfNamesAndAges)
+                </code></pre>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+{'Slim', 'Shady', 32, 35, 36, 75, 'Kevin', 46, 21, 54, 23, 56, 'Susan'}
+                </code></pre>
+
+
+
+
+
+
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+                <br>
+                <p><b>Interactive Code</b></p>
+                
+                <iframe src="https://trinket.io/embed/python/be6f1b46d3?runOption=run" width="100%" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe><br><br>
+
+
+                <h3>Quiz</h3>
+
+                <div class="cardQuiz ">
+
+                    <form name="quizForm" id="quizForm" >
+                        <div class="showAnswers" id="Ques1">
+                            <div class="LegQ2" id="LeQ2"><legend><b>1.</b> What symbol do we use to set a Set?</legend></div>
+                            <input type="radio" name="q" value="w" id="q1a">A. []<br>
+                            <input type="radio" name="q" value="w" id="q1b">B. ()<br>
+                            <input type="radio" name="q" value="w" id="q1c">C. <><br>
+                            <input type="radio" name="q" value="r" id="q1d">D. {}<br>
+                            <p id="demo">hello</p>
+                       </div>
+
+                           
+                        <div class="showAnswers" id="Ques2">
+                            <div class="LegQ2" id="LeQ2"><legend><b>2.</b> We can use <b>for i in range</b> on a set?</legend></div>
+                            <input type="radio" name="q2" value="w" id="q2a">A. True<br>
+                            <input type="radio" name="q2" value="r" id="q2b">B. False<br>
+                            
+                            <p id="demo2">hello</p>
+                        </div>
+
+                            <!-- <button onclick="submitAnswers()"  class="btn btn-primary">Click me</button> -->
+                            <a href='javascript:void();' class="btnleft btn-primary" onclick="submitAnswers()">Next</a>
+
+                            <!-- <input type="submit" value="Submit Answers"> -->                        
+                    </form>    
+                </div>
+                
+                <br>
+                
+                <a href="planningOurProgram.html" class="btn btn-primary">Next</a>
+
+            </div>
+        </div>
+    </section>
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+	<!-- footer -->
+	<footer class="footer bg-dark py-5">
+        <div class="container grid grid-3">
+            <div>
+                <h1>PiyLearn
+                </h1>
+               <!--  <p>Copyright &copy; 2020</p> -->
+            </div>
+            <div class="social">
+                <!-- <a href="#"><i class="fab fa-github fa-2x"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a> -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Tutorials</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <!-- <li><a href="docs.html">Docs</a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+	</body>
+	</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+	<link rel="stylesheet"  href="CSS/utilities.css">
+	<link rel="stylesheet"  href="CSS/style.css">
+    <script type="text/javascript" src="jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="QuizManager.js"></script>
+
+    <!-- py -3 -m http.serverv    -->
+    
+	<title> PiyLearn | Code All Together</title>
+</head>
+<body>
+	<!-- Navebar -->
+	<div class="navbar">
+		<div class="container flex">
+			<h1 class="logo"> PiyLearn. </h1>
+			<nav>
+				<ul>
+					<li><a  href="index.html"> Tutorials</a></li>
+					<li><a href="planningourprogram.html" class="top-nav-active"> Projects</a></li>
+					
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+<!-- #################################################################################################################################################################################################################################################-->          
+
+
+    <!-- Docs main -->
+    <section class="docs-main my-4">
+        <div class="container grid">
+             <div class="card bg-light p-3" id="nav-placeholder">
+                <!-- This is HTML form the Nav.html file -->
+                <script>
+                    $(function(){
+                        $("#nav-placeholder").load("Nav.html");
+                    });      
+                </script>
+            </div>
+
+
+<!-- #################################################################################################################################################################################################################################################-->          
+
+            <div class="card">
+                <h2><b>Putting our Code Together</b></h2>
+                <br>               
+
+                <p>We have all the parts needed to make our program. Now let us see what our code looks like when it is all put together. You can play around with the program <a href="https://usmankaleem2000.trinket.io/sites/calculator">here.</a></p>
+
+                <p><b>Complete Code:</b></p>
+                
+                <pre><code>
+def add(num1, num2):
+    return num1 + num2
+
+def subtract(num1, num2):
+    return num1 - num2
+
+def multiply(num1, num2):
+    return num1 * num2
+
+def divide(num1, num2):
+    return num1 / num2
+
+def modulus(num1, num2):
+  return num1 % num2
+  
+def floorDivision(num1, num2):
+  return num1 // num2
+
+def circleArea(radi):
+  pi = 3.14
+  return pi * (radi * radi);
+  
+def circlePerim(radi):
+  pi = 3.14
+  return 2 * pi * radi;
+  
+def fahrenToCel(fahren):
+  return (fahren - 32) * 5.0/9.0
+  
+def celToFahren(cel):
+  return 9.0/5.0 * cel + 32
+
+def powers(num1, num2):
+    return num1 ** num2
+
+print('''Select operation.")
+Enter "A" For Addittion
+Enter "B" For Subtraction
+Enter "C" For Multiplication
+Enter "D" For Divition
+Enter "E" For Floor Divide
+Enter "F" For Modulas
+Enter "G" To Calculate The Area Of A Circle
+Enter "H" To Calculate The Perimiter Of A Circal
+Enter "I" For Expoentiation
+Enter "J" To Convert Celsius To Fahrenheit
+Enter "K" To convert Fahrenheit To Celsius
+Enter "X" To Exit
+''')
+
+while True:
+  
+  choice = input("Enter choice(A, B, C, D, E, F, G, H, I, J, K, X): ")
+  choice = choice.upper()
+
+  if choice in ('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'X'):
+   
+    if choice == 'A':
+      print("You Have Selected Addition")
+      num1 = float(input("Enter The First Number You Want To Add: "))
+      num2 = float(input("Enter The Second Number You Want To Add: "))
+      print(str(num1)+ " + " + str(num2)  +  " = " +  str(add(num1, num2)))
+  
+    elif choice == 'B':
+      print("You Have Selected  Subtraction")
+      num1 = float(input("Enter The First Number You Want To Subtract: "))
+      num2 = float(input("Enter The Second Number You Want To Subtract: "))
+      print(str(num1) + " - " + str(num2)  +  " = " +  str(subtract(num1, num2)))
+  
+    elif choice == 'C':
+      print("You Have Selected Multiplication")
+      num1 = float(input("Enter The First Number You Want To Multiplie: "))
+      num2 = float(input("Enter The Second Number You Want To Multiplie: "))
+      print(str(num1) + " x " + str(num2)  +  " = " +  str(multiply(num1, num2)))
+      
+    elif choice == 'D':
+      print("You Have Selected Division")
+      num1 = float(input("Enter The First Number To Be Devide: "))
+      num2 = float(input("Enter The Second Number You Want To Divide By: "))
+      print(str(num1) + " / " + str(num2)  +  " = " +  str(divide(num1, num2)))
+      
+    elif choice == 'E':
+      print("You Have Selected Floor Division")
+      num1 = float(input("Enter The First Number You Want To Floor Divide: "))
+      num2 = float(input("Enter The Second Number You Want To Floor Divide By: "))
+      print(str(num1) + " // " + str(num2)  +  " = " +  str(floorDivision(num1, num2)))
+      
+    elif choice == 'F':
+      print("You Have Selected Modulas")
+      num1 = float(input("Enter first number: "))
+      num2 = float(input("Enter second number: "))
+      print(str(num1) + " Modulas of " + str(num2)  +  " = " +  str(modulus(num1, num2)))
+      
+    elif choice == 'G':
+      print("You Have Selected Area Of A Circle")
+      num1 = float(input("Enter the Radios of the Circle: "))
+      print("The area of a circle with a radios of " + str(num1) + " is: " +  str(circleArea(num1)))
+      
+    elif choice == 'H':
+      print("You Have Selected Perimeter Of A Circle")
+      num1 = float(input("Enter the Radios of the Circle: "))
+      print("The perimiter of a circle with a radios of " + str(num1) + " is: " + str(circlePerim(num1)))
+      
+    elif choice == 'I':
+      print("You Have Selected Exponentiation")
+      num1 = float(input("Enter a number "))
+      num2 = float(input("Enter a power"))
+      print(str(num1) + " to the power of " + str(num2)  +  " = " +  str(powers(num1, num2)))
+      
+    elif choice == 'J':
+      print("You Have Selected To Convert Celsius to Fahrenhite")
+      num1 = float(input("Enter in a  Celsius amount: "))
+      print(str(num1) + " Celeios to Fahrenhite is: " +  str(celToFahren(num1)))
+      
+    elif choice == 'K':
+      print("You Have Selected To Convert Fahrenhite to Celsius")
+      num1 = float(input("Enter in a  Fahrenhite amount: "))
+      print(num1, "=", fahrenToCel(num1))
+      print(str(num1) + " Fahrenhite to Celsius is: " +  str(fahrenToCel(num1)))
+    
+    elif choice == 'X':
+      break
+        
+    continue
+  else:
+    print("Invalid Input")
+        
+print("Goodbye")
+                </code></pre>
+
+                
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+                
+                
+                
+                <br>
+                
+                <a href="UsingOurProgram.html" class="btn btn-primary">Next</a>
+
+            </div>
+        </div>
+    </section>
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+	<!-- footer -->
+	<footer class="footer bg-dark py-5">
+        <div class="container grid grid-3">
+            <div>
+                <h1>PiyLearn
+                </h1>
+               <!--  <p>Copyright &copy; 2020</p> -->
+            </div>
+            <div class="social">
+                <!-- <a href="#"><i class="fab fa-github fa-2x"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a> -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Tutorials</a></li>
+                    <li><a href="planningOurProject.html">Projects</a></li>
+                    <!-- <li><a href="docs.html">Docs</a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+	</body>
+	</html>

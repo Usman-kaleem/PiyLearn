@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+	<link rel="stylesheet"  href="CSS/utilities.css">
+	<link rel="stylesheet"  href="CSS/style.css">
+    <script type="text/javascript" src="jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="QuizManager.js"></script>
+
+    <!-- py -3 -m http.serverv    -->
+    
+	<title> PiyLearn | Coding the Program</title>
+</head>
+<body>
+	<!-- Navebar -->
+	<div class="navbar">
+		<div class="container flex">
+			<h1 class="logo"> PiyLearn. </h1>
+			<nav>
+				<ul>
+					<li><a  href="index.html"> Tutorials</a></li>
+					<li><a href="planningourprogram.html" class="top-nav-active"> Projects</a></li>
+					<!-- <li><a href="docs.html"> Docs</a></li> -->
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+<!-- #################################################################################################################################################################################################################################################-->          
+
+
+    <!-- Docs main -->
+    <section class="docs-main my-4">
+        <div class="container grid">
+             <div class="card bg-light p-3" id="nav-placeholder">
+                <!-- This is HTML form the Nav.html file -->
+                <script>
+                    $(function(){
+                        $("#nav-placeholder").load("Nav.html");
+                    });      
+                </script>
+            </div>
+
+
+<!-- #################################################################################################################################################################################################################################################-->          
+
+            <div class="card">
+                <h2><b>Coding the Program</b></h2>
+                <br>
+                <p>Now what we have our pseudo code, we can now use it to help use start coding our Program. We will do this in steps.</p>
+                
+                <h3>Making our Methods</h3>
+
+                <p>Let us start by making our methods, these methods will be responsible for each of our calculations</p>
+
+
+                <p><b>Code of our Methods:</b></p>
+                
+                <pre><code>
+#Method for Addition
+def add(num1, num2):
+    return num1 + num2
+
+#Method for Subtraction
+def subtract(num1, num2):
+    return num1 - num2
+
+#Method for multiplication 
+def multiply(num1, num2):
+    return num1 * num2
+
+#Method for divition
+def divide(num1, num2):
+    return num1 / num2
+
+#Method for modulus
+def modulus(num1, num2):
+  return num1 % num2
+
+#method for floor Division  
+def floorDivision(num1, num2):
+  return num1 // num2
+
+#Method for exponential calculation
+def powers(num1, num2):
+    return num1 ** num2
+                </code></pre>
+                
+                <p>The Methods We made above were relatively simple, now let us move on to the calculation functions that are a bit more complex.</p>
+
+                <p><b>Making our More Complex Methods:</b></p>
+
+                <pre><code>
+#method for calculating the area of a circle
+def circleArea(radi):
+  pi = 3.14
+  return pi * (radi * radi);
+  
+# method for calculating the perimeter of a circle
+def circlePerim(radi):
+  pi = 3.14
+  return 2 * pi * radi;
+  
+#method to convert Fahrenheit to Celsius 
+def fahrenToCel(fahren):
+  return (fahren - 32) * 5.0/9.0
+
+#method to convert Celsius to Fahrenheit   
+def celToFahren(cel):
+  return 9.0/5.0 * cel + 32
+                </code></pre>
+
+         
+
+                <br>
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+                
+
+                <h3>Selection Menu</h3>
+                <p>We have all our methods ready. Now lets get our console application running. We will need to give the user options to chose what calculation they would like to run.</p>
+                
+                <p><b>Selection Menu Code</b></p>
+                
+                <pre><code>
+print('''Select operation.")
+Enter "A" For Addition
+Enter "B" For Subtraction
+Enter "C" For Multiplication
+Enter "D" For Division
+Enter "E" For Floor Divide
+Enter "F" For Modules
+Enter "G" To Calculate the Area Of A Circle
+Enter "H" To Calculate the Perimeter Of A Circle
+Enter "I" For Exponentiation
+Enter "J" To Convert Celsius to Fahrenheit
+Enter "K" To convert Fahrenheit to Celsius
+Enter "X" To Exit
+''')
+
+                </code></pre>
+
+                
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+                
+                
+                
+                <br>
+                
+                <a href="codingTheProgram_Part_ii.html" class="btn btn-primary">Next</a>
+
+            </div>
+        </div>
+    </section>
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+	<!-- footer -->
+	<footer class="footer bg-dark py-5">
+        <div class="container grid grid-3">
+            <div>
+                <h1>PiyLearn
+                </h1>
+               <!--  <p>Copyright &copy; 2020</p> -->
+            </div>
+            <div class="social">
+                <!-- <a href="#"><i class="fab fa-github fa-2x"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a> -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Tutorials</a></li>
+                    <li><a href="planningOurProject.html">Projects</a></li>
+                    <!-- <li><a href="docs.html">Docs</a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+	</body>
+	</html>

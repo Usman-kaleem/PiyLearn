@@ -10,7 +10,7 @@
 
     <!-- py -3 -m http.serverv    -->
     
-	<title> PiyLearn | </title>
+	<title> PiyLearn | Basic Maths</title>
 </head>
 <body>
 	<!-- Navebar -->
@@ -21,6 +21,7 @@
 				<ul>
 					<li><a class="top-nav-active" href="index.html"> Tutorials</a></li>
 					<li><a href="planningourprogram.html"> Projects</a></li>
+                    
 					<!-- <li><a href="docs.html"> Docs</a></li> -->
 				</ul>
 			</nav>
@@ -46,24 +47,23 @@
 <!-- #################################################################################################################################################################################################################################################-->          
 
             <div class="card">
-                <h2><b>Title</b></h2>
-                <br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla psariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <br>
+                <h2><b>Basic Math</b></h2><br>
+                <p>Lets look at how we can use basic operations in python to do some basic maths.</p>
+                <h3>Addition, Subtraction, Multiplication and Division</h3>
+
+
                 <p><b>Code Example:</b></p>
                 
                 <pre><code>
-X = 11
-Y = 3
+a = 5
+b = 10
+c = 55
+d = 1065
 
-If X > Y 
-    Print(“X is larger then Y”) 
-    Print(“Y is not larger then X”)
+print(a + d) # Addition
+print(b - c) # Subtraction
+print(c * b) # Multiplication
+print(d / a) # Division
                 </code></pre>
                 <br>
 
@@ -72,90 +72,126 @@ If X > Y
                 <pre><code>
 # --Output--
 
-X = 11
-Y = 3
-
-If X > Y 
-    Print(“X is larger then Y”) 
-    Print(“Y is not larger then X”)
+1070
+-45
+550
+213.0
                 </code></pre>
 
-         
-
-                <br>
-
 <!-- #################################################################################################################################################################################################################################################-->
 
-                <div class="alert alert-success">
-                    <i class="fas fa-info"></i> Note:
-                </div>
+                <h3>Modulus</h3>
 
-                <div class="alert alert-error">
-                    <i class="fas fa-info"></i> Note:
-                </div>
+                <p>The Modulus works like how division works but instead of showing a division it only shows the remainder.</p>
 
-                <p>As you see from the example above we have a block of code that gets executed after the If statement.</p>
-                <P>In other programming languages Indentation is only used to make the code easier to read. But in Python an error would occur.</P>
-
-<!-- #################################################################################################################################################################################################################################################-->
-
-                <h3>Complex</h3>
-                <p>A complex number is a float but with a ‘j’ at the end. This ‘j’ represents an imaginary number. For example: 2.501j, and 23.43e14j</p>
-                
                 <p><b>Code Example:</b></p>
                 
-                <pre><code>
-complexNumber1 = 21.54+3j
-complexNumber2 = -842.002j
-complexNumber3 = 23.4E16j
 
-print(type(complexNumber1))
-print(type(complexNumber2))
-print(type(complexNumber3))
+                <pre><code>
+a = 54
+b = 5
+c = 7
+
+print(a % b)# 5 goes into 50 ten times and leaves us with 4 remaining as 4 is not devisable by 5
+print(a % c)
                 </code></pre>
+                <br>
 
                 <p><b>Code Output:</b></p>
 
                 <pre><code>
 # --Output--
 
-&itclass 'complex'&gt
-&itclass 'complex'&gt
-&itclass 'complex'&gt
+4
+5
                 </code></pre>
 
+<!-- #################################################################################################################################################################################################################################################-->
+
+                <h3>Exponentiation</h3>
+
+                <p>This is multiplying something by the power of something else. For Example 3&sup3 which is the same as 3 x 3 x 3 = 27.</p>
+
+                <p><b>Code Example:</b></p>
+                <pre><code>
+a = 5
+b = 3
+c = 2
+
+print(a ** b) 
+print(b ** c) 
+print(a ** c)
+                </code></pre>
+                <br>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+125
+9
+25
+                </code></pre>
+
+<!-- #################################################################################################################################################################################################################################################-->
+
+                <h3>Floor division</h3>
+
+                <p>Floor division works similar to how normal division works however it will round down the result to the nearest whole number.</p>
+
+                <p><b>Code Example:</b></p>
+                <pre><code>
+a = 20.5
+b = 2
+
+print(a / b) # Standard division this can be a decimal number
+print(a // b) # Floor Division this will always be a whole number that is rounded down
+                </code></pre>
+                <br>
+
+                <p><b>Code Output:</b></p>
+
+                <pre><code>
+# --Output--
+
+10.25
+10.0
+                </code></pre>
+
+                
 <!-- #################################################################################################################################################################################################################################################-->
 
                 <br>
                 <p><b>Interactive Code</b></p>
                 
-                <iframe src="https://trinket.io/embed/python/aac402d05d" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe><br><br>
+                <iframe src="https://trinket.io/embed/python/96072669b3?runOption=run" width="100%" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe><br><br>
 
-                <h3>Quiz</h3>
+
                 <div class="cardQuiz ">
 
                     <form name="quizForm" id="quizForm" >
                         <div class="showAnswers" id="Ques1">
-                            <div class="LegQ2" id="LeQ2"><legend><b>1.</b> Who Were the Co-Founders of Rockstar?</legend></div>
-                            <input type="radio" name="q" value="r" id="q1a">A. Right answer<br>
-                            <input type="radio" name="q" value="w" id="q1b">B. Wrong Answer<br>
-                            <input type="radio" name="q" value="w" id="q1c">C. Wrong Answer<br>
-                            <input type="radio" name="q" value="w" id="q1d">D. Wrong Answer<br>
+                            <div class="LegQ2" id="LeQ2"><legend><b>1.</b> Which symbol do we use for Exponentiation in python?</legend></div>
+                            <input type="radio" name="q" value="w" id="q1a">A. *<br>
+                            <input type="radio" name="q" value="w" id="q1b">B. %<br>
+                            <input type="radio" name="q" value="w" id="q1c">C. //<br>
+                            <input type="radio" name="q" value="r" id="q1d">D. **<br>
                             <p id="demo">hello</p>
                        </div>
 
                            
                         <div class="showAnswers" id="Ques2">
-                            <div class="LegQ2" id="LeQ2"><legend><b>2.</b> Who Were the Co-Founders of Rockstar?</legend></div>
-                            <input type="radio" name="q2" value="r" id="q2a">A. Right answer<br>
-                            <input type="radio" name="q2" value="w" id="q2b">B. Wrong Answer<br>
-                            <input type="radio" name="q2" value="w" id="q2c">C. Wrong Answer<br>
-                            <input type="radio" name="q2" value="w" id="q2d">D. Wrong Answer<br>
+                            <div class="LegQ2" id="LeQ2"><legend><b>2.</b> What is the output of print(10 & 3) ?</legend></div>
+                            <input type="radio" name="q2" value="w" id="q2a">A. 3<br>
+                            <input type="radio" name="q2" value="w" id="q2b">B. 30<br>
+                            <input type="radio" name="q2" value="r" id="q2c">C. 1<br>
+                            <input type="radio" name="q2" value="w" id="q2d">D. 0<br>
                             <p id="demo2">hello</p>
                         </div>
 
                             <!-- <button onclick="submitAnswers()"  class="btn btn-primary">Click me</button> -->
-                            <a href='javascript:void();' class="btnleft btn-primary" onclick="submitAnswers()">Submit</a>
+                            <a href='javascript:void();' class="btnleft btn-primary" onclick="submitAnswers()">Next</a>
 
                             <!-- <input type="submit" value="Submit Answers"> -->                        
                     </form>    
@@ -163,7 +199,7 @@ print(type(complexNumber3))
                 
                 <br>
                 
-                <a href="#" class="btn btn-primary">Next</a>
+                <a href="comparatoroperators.html" class="btn btn-primary">Next</a>
 
             </div>
         </div>
@@ -188,7 +224,7 @@ print(type(complexNumber3))
             <nav>
                 <ul>
                     <li><a href="index.html">Tutorials</a></li>
-                    <li><a href="planningOurProject.html">Projects</a></li>
+                    <li><a href="project.html">Projects</a></li>
                     <!-- <li><a href="docs.html">Docs</a></li> -->
                 </ul>
             </nav>
